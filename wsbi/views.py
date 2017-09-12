@@ -1,11 +1,20 @@
 from django.http import HttpResponse
+from rest_framework.response import Response
+from rest_framework import status
 from django.shortcuts import render, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from wsbi.models import  *
-from wsbi.serializers import  ConfiguracionSerializer
+from wsbi.serializers import  *
 import datetime
+from rest_framework.decorators import api_view
+from django.utils.six import BytesIO
+from rest_framework.parsers import JSONParser
+from rest_framework.renderers import JSONRenderer
+from wsbi.ParserObject import  ParserObject
+import json
+
 
 class JSONResponse(HttpResponse):
     def __init__(self, data, **kwargs):
@@ -24,6 +33,63 @@ def estadistica(request):
 
 def recorrido(request):
     return render(request,'recorrido.html')
+
+
+@api_view(['GET'])
+def get_pasos_hitoricos(request):
+    if request.method == 'GET':
+        snippets = PasosHistorico.objects.all()
+        serializer = PasosHistoricoSerializer(snippets, many=True)
+        return JSONResponse(serializer.data)
+
+@api_view(['POST'])
+def set_pasos_frecuencias(request):
+    if request.method == 'POST':
+        c = json.dumps(request.data)
+        pasosFrecs = ParserObject(c)
+        """
+        serializer = PasosHistoricoSerializer(data=request.data)
+        if serializer.is_valid():
+            print(serializer.data['apellido'])
+            print(serializer.data.pop('nombre'))
+            print(serializer.data.get('dni'))
+            #serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        """
+        obj = PasosHistorico(
+            usuarioBaston=UsuarioBaston.objects.get(pk=pasosFrecs.id),
+            fecha=pasosFrecs.fecha,
+            pasosProm=pasosFrecs.pasosProm)
+        obj.save()
+
+        obj = PulsosHistorico(
+            usuarioBaston=UsuarioBaston.objects.get(pk=pasosFrecs.id),
+            fecha=pasosFrecs.fecha,
+            pulsosProm = 0,
+            pulsosMax = pasosFrecs.pulsosMax,
+            pulsosMin = pasosFrecs.pulsosMin)
+        obj.save()
+
+        return JSONResponse({
+            "res": "OK"
+        })
+
+@api_view(['POST'])
+def set_recorrido(request):
+    if request.method == 'POST':
+        c = json.dumps(request.data)
+        recorrido = ParserObject(c)
+        print(recorrido.camino)
+        obj = TrayectoriaHistorico(
+            usuarioBaston=UsuarioBaston.objects.get(pk=recorrido.id),
+            fecha=recorrido.fecha,
+            camino=recorrido.camino)
+        obj.save()
+
+        return JSONResponse({
+            "res": "OK"
+        })
+
 
 
 @csrf_exempt

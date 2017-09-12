@@ -95,7 +95,7 @@ DATABASES = {
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgres://pqjviondkeppiy:040ced522ccad09eff77f55ed0f79d84a19b86dd7652ec8fd333d6ce5ebfdcd0@ec2-54-163-246-154.compute-1.amazonaws.com:5432/d1ntokt50dqlg1'
+        default='postgres://kuiwtzdtjueykb:e6074ccc7510c4522a36bab0e0c8ae2b28842cb2f1b853eff7f5d9e889e44e70@ec2-23-23-244-83.compute-1.amazonaws.com:5432/d1aiq5t0i144ls'
 	)
 }
 

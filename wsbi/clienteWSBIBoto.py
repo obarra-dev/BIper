@@ -61,13 +61,12 @@ c = json.dumps(
 }
 )
 
-#config = ParserObject(c)
+config = ParserObject(c)
 
 
 
-response = requests.get('https://bidesa.herokuapp.com/wsbi/config/1')
-print(response.content)
-config = ParserObject(response.content)
+#response = requests.get('http://localhost:8000/wsbi/config/2')
+#config = ParserObject(response.content)
 
 credencialAmazon = ParserObject(json.dumps(config.credencialAmazon))
 
