@@ -1,0 +1,70 @@
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'codropsicons';
+	src: url('../fonts/codropsicons/codropsicons.eot');
+	src: url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'), url('../fonts/codropsicons/codropsicons.woff') format('woff'), url('../fonts/codropsicons/codropsicons.ttf') format('truetype'), url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	content: '';
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/* Related demos */
+
+.content--related {
+	text-align: center;
+	font-weight: bold;
+	padding-top: 4em;
+}
+
+.media-item {
+	display: inline-block;
+	padding: 1em;
+	vertical-align: top;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.media-item__img {
+	max-width: 100%;
+	opacity: 0.6;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.media-item:hover .media-item__img,
+.media-item:focus .media-item__img {
+	opacity: 1;
+}
+
+.media-item__title {
+	margin: 0;
+	padding: 0.5em;
+	font-size: 1em;
+}
+
+@media screen and (max-width: 50em) {
+	.codrops-header {
+		padding: 3em 10% 4em;
+	}
+}
+
+@media screen and (max-width: 40em) {
+	.codrops-header h1 {
+		font-size: 2.8em;
+	}
+}

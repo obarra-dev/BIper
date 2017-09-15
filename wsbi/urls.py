@@ -13,8 +13,7 @@ urlpatterns = [
     url(r'^wsbi/configuracion$', views.configuracion),
     url(r'^wsbi/estadistica$', views.estadistica),
     url(r'^wsbi/recorrido$', views.recorrido),
-
-
+    url(r'^wsbi/get_pasos_semanales$', views.get_pasos_semanales),
 
 ]
 

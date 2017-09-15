@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0048)http://getbootstrap.com/examples/justified-nav/# -->
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
@@ -21,8 +21,191 @@
     <!-- Custom styles for this template -->
     <link href="/static/css/justified-nav.css" rel="stylesheet">
 
-
+	<link href="/static/css/main.css" rel="stylesheet" type="text/css">
+	<link href="/static/css/bandejas.css" rel="stylesheet" type="text/css">
+	
+	<link rel="stylesheet" type="text/css" href="/static/css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/component.css" />
+		<!-- remove this if you use Modernizr -->
+		<script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
   </head>
+  <!-- BEGIN MODAL -->
+    <div class="modal fade" id="recordatorio-ID" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            <h4 class="modal-title">Configurar recordatorio </h4>
+          </div>
+          <div class="modal-body">
+            <div class="row adicionales-body">
+              <div class="col-lg-3 adicionales-sidebar">
+                <div class="navbar-static-side">
+                  <ul class="nav" id="side-menu">
+                    <li style="list-style: none; border-bottom:0px;">
+                      <a style="padding: 10px !important;">
+                        <span class="menu-title">
+                          &nbsp;Arriba abuelo tenes que turno hoy <br/> 
+
+                          &nbsp;&nbsp;&nbsp;Fecha de Recordatorio: 09/10/1993<br/>
+                        </span>
+                      </a>
+                      <span><hr class="line-collapsed"></span>
+                    </li>
+                    <li style="list-style: none; border-bottom:0px;">
+                      <a style="padding: 10px !important;">
+                        <span class="menu-title">
+                          &nbsp;Es mi cumple JUAN MANUELJUAN MANUELJUAN MANUELJUAN MANUEL<br/> 
+
+                          &nbsp;&nbsp;&nbsp;Fecha de Recordatorio: 09/10/1993<br/>
+                        </span>
+                      </a>
+                      <span><hr class="line-collapsed"></span>
+                    </li>
+					<li style="list-style: none; border-bottom:0px;">
+                      <a style="padding: 10px !important;">
+                        <span class="menu-title">
+                          &nbsp;Toma la pastilla<br/> 
+                          &nbsp;&nbsp;&nbsp;JUAN MANUEL<br/>
+                          &nbsp;&nbsp;&nbsp;Fecha de Recordatorio: 09/10/1993<br/>
+                        </span>
+                      </a>
+                      <span><hr class="line-collapsed"></span>
+                    </li>
+					<li style="list-style: none; border-bottom:0px;">
+                      <a style="padding: 10px !important;">
+                        <span class="menu-title">
+                          &nbsp;Cerra la puerta<br/> 
+                          &nbsp;&nbsp;&nbsp;JUAN MANUEL<br/>
+                          &nbsp;&nbsp;&nbsp;Fecha de Recordatorio: 09/10/1993<br/>
+                        </span>
+                      </a>
+                      <span><hr class="line-collapsed"></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-9 adicionales-content">
+                <div class="row">
+                  <div class="col-lg-12 col-sm-12">
+                    <div class="col-lg-10 col-lg-offset-1">
+                       <input class="input" placeholder="Evento sin título">
+                    </div>
+                  </div>
+                </div>
+				<br>
+				<div class="row">
+                  <div class="col-lg-12 col-sm-12">
+                    <div class="col-lg-10 col-lg-offset-1">
+					<textarea style="margin: 0px; width: 866px; height: 96px;">
+						At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+					</textarea>
+                    </div>
+                  </div>
+                </div>
+				<br>
+				<div class="row">
+                  <div class="col-lg-12 col-sm-12">
+                    <div class="col-lg-10 col-lg-offset-1">
+						<input type="file"  id="file-ID" class="inputfile inputfile-6"/>
+						<label for="file-ID">
+						<span></span> 
+						<strong>Subir audio</strong>
+						</label>
+					</div>
+                  </div>
+                </div>
+				
+				
+				
+                <br><br>
+                <form>
+                  <div class="row">
+                    <div class="col-lg-2 col-lg-offset-1">
+                       Avisarme un día:
+                    </div>
+					<div class="col-lg-4">
+                          <input class="input"  placeholder="Evento sin título">
+                    </div>
+					<div class="col-lg-2">
+                      <select class="select">
+                            <option>12:00 AM</option><option>12:30 AM</option><option>01:00 AM</option><option>01:30 AM</option><option>02:00 AM</option><option>02:30 AM</option>
+							<option>03:00 AM</option><option>03:30 AM</option><option>04:00 AM</option><option>04:30 AM</option><option>05:00 AM</option><option>05:30 AM</option>
+							<option>06:00 AM</option><option>06:30 AM</option><option>07:00 AM</option><option>07:30 AM</option><option>08:00 AM</option><option>08:30 AM</option>
+							<option>09:00 AM</option><option>09:30 AM</option><option>10:00 AM</option><option>10:30 AM</option><option>11:00 AM</option><option>11:30 AM</option>
+							<option>12:00 PM</option><option>12:30 PM</option><option>01:00 PM</option><option>01:30 PM</option><option>02:00 PM</option><option>02:30 PM</option>
+							<option>03:00 PM</option><option>03:30 PM</option><option>04:00 PM</option><option>04:30 PM</option><option>05:00 PM</option><option>05:30 PM</option>
+							<option>06:00 PM</option><option>06:30 PM</option><option>07:00 PM</option><option>07:30 PM</option><option>08:00 PM</option><option>08:30 PM</option>
+							<option>09:00 PM</option><option>09:30 PM</option><option>10:00 PM</option><option>10:30 PM</option><option>11:00 PM</option><option>11:30 PM</option>
+							
+                          </select>
+                    </div>
+					<div class="col-lg-2">
+                       &nbsp;&nbsp;&nbsp;
+                    </div>
+                  </div>        
+                  <br>
+                  <div class="row">
+                    <div class="col-lg-2 col-lg-offset-1">
+                       Repetir:
+                    </div>
+					<div class="col-lg-4">
+                          <select class="select">
+                            <option>Nunca</option>
+							<option>Todos los días</option>
+							<option>Todos lo sábados</option>
+							<option>Todos los martes</option>
+							<option>Cada dos Semanas</option>
+							<option>Otro…</option>
+                          </select>
+                    </div>
+					<div class="col-lg-4">
+                      &nbsp;&nbsp;&nbsp;
+                    </div>
+					
+                  </div>
+                  <br>
+				  <div class="row">
+                    <div class="col-lg-2 col-lg-offset-1">
+                       Recordar:
+                    </div>
+					<div class="col-lg-4">
+                           <select class="select">
+                            <option>0 Minutos</option>
+							<option>5 Minutos</option>
+							<option>10 Minutos</option>
+							<option>15 Minutos</option>
+							<option>30 Minutos</option>
+							<option>1 Hora</option>
+							<option>2 Hora</option>
+							<option>3 Hora</option>
+							<option>4 Hora</option>
+							<option>12 Hora</option>
+							<option>1 Día</option>
+							<option>2 Días</option>
+							<option>3 Días</option>
+							<option>1 Semana</option>
+							<option>2 Semanas </option>
+                          </select>
+                    </div>
+					<div class="col-lg-4">
+                      &nbsp;&nbsp;&nbsp;
+                    </div>
+					
+                  </div>
+                  <br>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Recordar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END MODAL -->
+  
 
   <body>
 
@@ -56,9 +239,9 @@
                               <spam class="mejora9-2">Pulso Minimo</spam>
                            </div>
                            <div class="col-lg-6 col-sm-6">
-                              <input name="nombre" ng-model="cotitular.nombres" type="text" class="cliente4imput-1" placeholder="" aria-describedby="">  
+                              <input id="pulsomin-ID" name="pulsomin-n" type="text" class="cliente4imput-1" placeholder="" aria-describedby="">
                            </div>
-                           <label id="nombre-error" for="nombre" class="error" style="margin-left: 48px;"></label>
+                           <label id="nombre-error" for="pulsomin-n" class="error" style="margin-left: 48px;"></label>
                         </div>
                      </div>
                      <div class="col-lg-6 col-sm-6">
@@ -67,9 +250,9 @@
                               <spam class="mejora4-a">Pulso Maximo:</spam>
                            </div>
                            <div class="col-lg-6 col-sm-6">
-                              <input name="apellido" ng-model="cotitular.apellidos" type="text" class="cliente4imput-1-a" placeholder="" aria-describedby="">
+                              <input id="pulsomax-ID"  name="pulsomax-n" type="text" class="cliente4imput-1-a" placeholder="" aria-describedby="">
                            </div>
-                           <label id="apellido-error" for="apellido" class="error" style="margin-left: 14px;"></label>
+                           <label id="apellido-error" for="pulsomax-n" class="error" style="margin-left: 14px;"></label>
                         </div>
                      </div>
        
@@ -84,7 +267,7 @@
                   <div class="row">
                      <div class="colg-lg-12 col-sm-12">
                       <spam class="mejora4-a">Pasos Minimos:</spam>
-                         <input name="apellido" ng-model="cotitular.apellidos" type="text" class="cliente4imput-1-a" placeholder="" aria-describedby="">
+                         <input id="pasosmin-ID" name="pasosmin-n" type="text" class="cliente4imput-1-a" placeholder="" aria-describedby="">
                         
                      </div>
                   </div>
@@ -92,7 +275,53 @@
                   <hr class="line-4">
                   <br> 
                   <h4 class="espproducto10" style="margin-left: 44px;">RECORDATORIOS&nbsp;</h4>
-                  <br> <br> 
+                  <br> <br>
+                   <div class="col-lg-12 adicionales-content">
+                <div class="row">
+                  <div class="col-lg-12 col-sm-12">
+                    <table class=" table-striped table-hover" id="tablerecordatorios-ID">
+                      <thead>
+                        <tr>
+                          <th style="width: 10%;">
+                            <strong>Solicitud</strong>
+                          </th>
+
+                          <th style="width: 20%;">
+                            <strong>Titulo&nbsp;&nbsp;
+                              <em aria-hidden="true" class="fa fa-caret-down" style="cursor:pointer"></em>
+                              <em aria-hidden="true" class="fa fa-caret-up" style="cursor:pointer"></em>
+                            </strong>
+                          </th>
+
+                          <th style="width: 20%;">
+                            <strong>Hora&nbsp;&nbsp;
+                              <em aria-hidden="true" class="fa fa-caret-down" style="cursor:pointer"></em>
+                              <em aria-hidden="true" class="fa fa-caret-up" style="cursor:pointer"></em>
+                            </strong>
+                          </th>
+
+                          <th style="width: 20%;">
+                            <strong>Minuto&nbsp;&nbsp;
+                              <em aria-hidden="true" class="fa fa-caret-down" style="cursor:pointer"></em>
+                              <em aria-hidden="true" class="fa fa-caret-up" style="cursor:pointer"></em>
+                            </strong>
+                          </th>
+
+                          <th style="width: 30%;">
+                            <strong>Repeticion&nbsp;&nbsp;
+                              <em aria-hidden="true" class="fa fa-caret-down" style="cursor:pointer"></em>
+                              <em aria-hidden="true" class="fa fa-caret-up" style="cursor:pointer"></em>
+                            </strong>
+                          </th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                       </div>
                   <div class="row">
                      <div class="colg-lg-12 col-sm-12">
                       <spam class="mejora4-a">ABRIR</spam>
@@ -105,7 +334,7 @@
             </div>
              <br>
               <br>
-        <p><a class="btn btn-lg btn-success" href="configuracion.html" role="button">Configurar</a></p>
+        <p><a class="btn btn-lg btn-success" onclick="abrirRecordatorio()" role="button">Configurar</a></p>
       </div>
 
  
@@ -120,6 +349,11 @@
 
     <script src="/static/js/jquery-3.2.1.min.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
+	<script src="/static/js/controller/configuracion.js"></script>
+	<script src="/static/js/custom-file-input.js"></script>
+    <script src="/static/js/jquery.fileDownload.js"></script>
+  	<script src="/static/js/jquery.dataTables.js"></script>
+    <script src="/static/js/dataTables.bootstrap.js"></script>
   
 
 </body></html>

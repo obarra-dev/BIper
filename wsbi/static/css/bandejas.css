@@ -1,0 +1,321 @@
+/* Menu de navegación superior */
+.process a .btn:hover,
+.active > a > .btn {
+	color: #cdb885;
+	border-color: #cdb885;
+}
+.process a {
+	color: #b8b8b8 !important;
+}
+.active a, .process a:hover {
+	color: #cdb885 !important;
+}
+.notifications {
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	font-size: 12px;
+	border-radius: 50%;
+	position: relative;
+	left: 42px;
+	margin-top: -20px;
+	color: #fff;
+	background: #b8b8b8;
+	border-color: #b8b8b8;
+	pointer-events: none;
+}
+.process a:hover .notifications,
+.active a .notifications {
+	background: #cdb885;
+	border-color: #cdb885;
+}
+.notifications > p {
+	padding-top: 5px;
+}
+.notif-icon {
+	margin-top: 4px;
+}
+/* Inputs */
+.input {
+    background: none;
+	width:100%;
+	border: 0px;
+	border-bottom: solid #9c9073 1px;
+	padding-left: 6px;
+}
+.input:focus {
+	outline: none;
+}
+.input.half {
+	width:59%;
+}
+.input.quarter {
+	width:14%;
+}
+.select {
+    background: none;
+	width:100%;
+	border: 0px;
+	padding-bottom: 2px;
+	border-bottom: solid #9c9073 1px;
+	padding-left: 2px;
+}
+.select:focus {
+	outline: none;
+}
+.select.half {
+	width:39%;
+}
+.select.quarter {
+	width:14%;
+}
+/* Modales */
+.modal-dialog {
+	width: 95%;
+}
+.modal .panel {
+	border-style: double !important;
+	border-radius: 4px !important;
+}
+.modal .panel-heading {
+	padding: 10px 15px;
+	background: #cdb885;
+}
+.modal .panel .icon {
+	font-size: 28px;
+	float: right;
+	line-height: 0.6;
+}
+.modal .panel img {
+	padding-bottom: 9px;
+}
+#table-historial thead {
+	background: #cdb885;
+}
+#table-historial {
+	border-radius: 4px;
+	border: 4px solid #cdb885;
+	border-collapse: initial;
+}
+#table-historial tr > th, 
+#table-historial tr > th, 
+#table-historial tr > th, 
+#table-historial tr > td, 
+#table-historial tr > td, 
+#table-historial tr > td {
+	border: 1px solid #cdb885;
+}
+.modal .badge {
+	margin-bottom: 1px;
+}
+#adicionales .modal-body {
+	padding: 0px 0px 0px 15px;
+}
+#adicionales .modal-footer {
+	margin-top: 0px;
+}
+.adicionales-sidebar {
+	background: #3C3C3C;
+	min-height: 450px;
+}
+.adicionales-sidebar form{
+	height: 40px;
+}
+.adicionales-body {
+	min-height: 400px;
+}
+.adicionales-content {
+	padding: 0px;
+}
+#table-adicionales {
+	width:100%;
+	margin:0px;
+}
+.comentario {
+	min-height: 200px;
+	text-align: justify;
+}
+.comentario textarea {
+	min-height: 30vh;
+	font-size: 13px;
+}
+.modificacion-left {
+	border-right: 3px solid #cdb885;
+}
+.modificacion-right {
+  	border-left: 3px solid #cdb885;
+}
+/* Gráficos de página principal */
+.chart {
+	height: 100%;
+	width: 100%;
+	min-height: 300px;
+}
+.chart-title {
+	text-align:center;
+}
+.page-icon {
+	font-size: 100px;
+    line-height: 5;
+}
+.page-icon:hover {
+    color: #cdb885;
+}
+/* Filtros de Pendientes */
+.filter {
+	padding-left: 30px;
+}
+.filter .input-group-addon {
+	border-bottom-left-radius: 10px !important;
+	border-top-left-radius: 10px !important;
+	border-color: #b8b8b8;
+}
+.filter-header {
+	background: #cdb885;
+	border-color: #cdb885;
+	padding: 10px;
+}
+.filter-date .input-group input{
+	display: inline-block;
+	width:49%;
+}
+.filter-button {
+	padding: 6px 12px !important;
+}
+.filter-button-notif {
+	padding: 6px 4px !important;
+	margin-left: -15px
+}
+/* Tabla de pendientes */
+.pendientes-header {
+	background: #cdb885;
+	border-color: #cdb885;
+	padding: 8px;
+}
+.caso {
+	margin-left: -15px;
+}
+#casos .panel {
+	margin-bottom: 0px;
+}
+.caso .header {
+	background: #eee;
+	margin: 0px;
+}
+.caso div {
+	padding: 4px 2px;
+}
+.caso div .checkbox {
+	padding: 8px;
+}
+.pendiente div .checkbox {
+	margin-left: -2px;
+}
+.caso input[type=checkbox] {
+	margin: 0;
+	background-color: #eee;
+}
+.pendiente input[type=checkbox] {
+	background-color: #fff;
+}
+.caso .boton {
+	color: #cdb885;
+	font-size: 22px;
+	padding: 0px 16px;
+	line-height: 0;
+}
+.caso .boton .cantidad {	
+	font-size: 18px;
+}
+.caso .boton a {
+	color: #cdb885 !important;
+}
+.caso .pendiente {
+	background: white;
+	margin: 0px;
+}
+.caso .pendiente .badge {
+	margin-top: 0px !important;
+}
+/* Lista de notificaciones */
+.notif-header {
+	border: 1px solid #cdb885;
+	margin-left:0px;
+}
+.select-all {
+	padding-top: 6px;
+	padding-left: 7px;
+	display: inline-block;
+}
+.btn-archive {
+	color: #cdb885;
+	background-color: #fff;
+	border-left: 1px solid #cdb885;
+}
+.btn-archive:hover {
+	color: #fff;
+	background-color: #9c9073;
+	border-color: #9c9073;
+}
+.notif-list {
+	cursor: default;
+	height: 314px;
+	padding-right: 0px;
+	overflow-y:scroll;
+	margin-right: -8px;
+	padding-left: 0px;
+}
+.notif-list li {
+	border-top: 1px solid #cdb885;
+	background: #eee;
+	list-style: none;
+	padding: 8px;
+}
+.notif-list li:first-child {
+	border-top: none;
+}
+.notif-list li.active {
+	background: #fff;
+}
+.notif-list li div {
+	display: inline-block;
+}
+.notif-list li div:first-child input {
+	height: 24px;
+}
+.notif-content {
+	padding-left: 10px;
+	width: 90%;
+	cursor: pointer;
+}
+.notif-content div:last-child {
+	float:right;
+	text-align: right;
+}
+.notif-list .notif-label {
+	background: #cdb885;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.notif-container {
+	min-height: 350px;
+	border: 1px solid #cdb885;
+}
+.notif-container .item {
+	height:40%;
+	text-align: justify;
+}
+.notif-container .item div {
+	display: inline-block;
+}
+.notif-container .item div:last-of-type {
+	margin-top: 10px;
+	float:right;
+	text-align: right;
+}
+.notif-container .item h4 {
+	margin-bottom: 2px;
+}
+.notif-line {
+	margin: 10px 0px 10px 0px;
+}

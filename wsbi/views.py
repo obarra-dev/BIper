@@ -14,6 +14,7 @@ from rest_framework.parsers import JSONParser
 from rest_framework.renderers import JSONRenderer
 from wsbi.ParserObject import  ParserObject
 import json
+from datetime import  timedelta
 
 
 class JSONResponse(HttpResponse):
@@ -40,6 +41,17 @@ def get_pasos_hitoricos(request):
     if request.method == 'GET':
         snippets = PasosHistorico.objects.all()
         serializer = PasosHistoricoSerializer(snippets, many=True)
+        return JSONResponse(serializer.data)
+
+@api_view(['GET'])
+def get_pasos_semanales(request):
+    if request.method == 'GET':
+        dt = datetime.date.today()
+        start_date = dt - timedelta(days=dt.weekday())
+        end_date = start_date + timedelta(days=7)
+        pasos_semanales = PasosHistorico.objects.filter(fecha__range=(start_date, end_date))
+        print(pasos_semanales)
+        serializer = PasosHistoricoSerializer(pasos_semanales, many=True)
         return JSONResponse(serializer.data)
 
 @api_view(['POST'])
