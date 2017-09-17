@@ -1,3 +1,4 @@
+	var recordatoriosAux = [] ;
 	$.ajax({
         url: '/wsbi/config/1',
         headers : {
@@ -9,8 +10,9 @@
             $('#pulsomin-ID').val(data.pulsoMin);
             $('#pulsomax-ID').val(data.pulsoMax);
             $('#pasosmin-ID').val(data.pasosMin);
-            setTablaRecordatorios(data.recordatorios);
-            alert("A user with this username already exists.");
+            recordatoriosAux = data.recordatorios;
+            setTablaRecordatorios(recordatoriosAux);
+
 
         },
         error : function(jqXHR, exception) {
@@ -58,26 +60,8 @@ function setTablaRecordatorios(recordatorios) {
 	};
 
 function abrirRecordatorio() {
-
-	$.ajax({
-        url: '/wsbi/get_pasos_semanales',
-        headers : {
-			'Accept' : 'application/json',
-			'Content-Type' : 'application/json'
-		},
-		dataType : "json",
-        success: function (data) {
-
-            alert("A user with this username already exists.");
-
-        },
-        error : function(jqXHR, exception) {
-			var msg = '';
-
-		},
-
-
-      });
-
+    for (i = 0; i < recordatoriosAux.length; i++) {
+          $("#side-menu-ID").append("<li style=\"list-style: none; border-bottom:0px;\"> <a style=\"padding: 10px !important;\"><span>"+ recordatoriosAux[i].titulo+"<br>"+ recordatoriosAux[i].hora+"<br>"+"</span></a><span><hr class=\"line-collapsed\"></span></li>");
+    }
       $("#recordatorio-ID").modal();
 }

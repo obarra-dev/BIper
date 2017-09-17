@@ -27,7 +27,12 @@ def inicio(request):
     return render(request,'inicio.html')
 
 def configuracion(request):
-    return render(request,'configuracion.html')
+    if request.method == 'POST':
+        usuariosBas = UsuarioBaston.objects.all()
+        for user in usuariosBas:
+            if user.email == request.POST.get('inputEmail', ''):
+                return render(request, 'configuracion.html')
+    return render(request, 'inicio.html')
 
 def estadistica(request):
     return render(request,'estadistica.html')
@@ -44,7 +49,15 @@ def get_pasos_hitoricos(request):
         return JSONResponse(serializer.data)
 
 @api_view(['GET'])
-def get_pasos_semanales(request):
+def get_recorridos_hitoricos(request):
+    if request.method == 'GET':
+        snippets = TrayectoriaHistorico.objects.all()
+        serializer = TrayectoriaHistoricoSerializer(snippets, many=True)
+        return JSONResponse(serializer.data)
+
+
+@api_view(['GET'])
+def get_pasos_semanal(request):
     if request.method == 'GET':
         dt = datetime.date.today()
         start_date = dt - timedelta(days=dt.weekday())
@@ -52,6 +65,15 @@ def get_pasos_semanales(request):
         pasos_semanales = PasosHistorico.objects.filter(fecha__range=(start_date, end_date))
         print(pasos_semanales)
         serializer = PasosHistoricoSerializer(pasos_semanales, many=True)
+        return JSONResponse(serializer.data)
+
+@api_view(['GET'])
+def get_recorrido_semanal(request):
+    if request.method == 'GET':
+        c = TrayectoriaHistorico.objects.filter(fecha__year=datetime.datetime.today().year,
+                                                fecha__month=datetime.datetime.today().month,
+                                                fecha__day=datetime.datetime.today().day)
+        serializer = TrayectoriaHistoricoSerializer(c, many=True)
         return JSONResponse(serializer.data)
 
 @api_view(['POST'])

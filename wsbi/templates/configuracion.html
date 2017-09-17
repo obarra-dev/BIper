@@ -41,43 +41,24 @@
             <div class="row adicionales-body">
               <div class="col-lg-3 adicionales-sidebar">
                 <div class="navbar-static-side">
-                  <ul class="nav" id="side-menu">
-                    <li style="list-style: none; border-bottom:0px;">
+                  <ul class="nav" id="side-menu-ID">
+                      <br> <br>
+					<li style="list-style: none; border-bottom:0px;">
                       <a style="padding: 10px !important;">
-                        <span class="menu-title">
-                          &nbsp;Arriba abuelo tenes que turno hoy <br/> 
-
-                          &nbsp;&nbsp;&nbsp;Fecha de Recordatorio: 09/10/1993<br/>
-                        </span>
-                      </a>
-                      <span><hr class="line-collapsed"></span>
-                    </li>
-                    <li style="list-style: none; border-bottom:0px;">
-                      <a style="padding: 10px !important;">
-                        <span class="menu-title">
-                          &nbsp;Es mi cumple JUAN MANUELJUAN MANUELJUAN MANUELJUAN MANUEL<br/> 
-
-                          &nbsp;&nbsp;&nbsp;Fecha de Recordatorio: 09/10/1993<br/>
+                        <span>
+                          Toma la pastilla<br/>
+                          JUAN MANUEL<br/>
+                          Fecha de Recordatorio: 09/10/1993<br/>
                         </span>
                       </a>
                       <span><hr class="line-collapsed"></span>
                     </li>
 					<li style="list-style: none; border-bottom:0px;">
                       <a style="padding: 10px !important;">
-                        <span class="menu-title">
-                          &nbsp;Toma la pastilla<br/> 
-                          &nbsp;&nbsp;&nbsp;JUAN MANUEL<br/>
-                          &nbsp;&nbsp;&nbsp;Fecha de Recordatorio: 09/10/1993<br/>
-                        </span>
-                      </a>
-                      <span><hr class="line-collapsed"></span>
-                    </li>
-					<li style="list-style: none; border-bottom:0px;">
-                      <a style="padding: 10px !important;">
-                        <span class="menu-title">
-                          &nbsp;Cerra la puerta<br/> 
-                          &nbsp;&nbsp;&nbsp;JUAN MANUEL<br/>
-                          &nbsp;&nbsp;&nbsp;Fecha de Recordatorio: 09/10/1993<br/>
+                        <span>
+                          Cerra la puerta<br/>
+                          JUAN MANUEL<br/>
+                          Fecha de Recordatorio: 09/10/1993<br/>
                         </span>
                       </a>
                       <span><hr class="line-collapsed"></span>
@@ -97,8 +78,7 @@
 				<div class="row">
                   <div class="col-lg-12 col-sm-12">
                     <div class="col-lg-10 col-lg-offset-1">
-					<textarea style="margin: 0px; width: 866px; height: 96px;">
-						At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+					<textarea style="width: 866px; height: 96px;">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
 					</textarea>
                     </div>
                   </div>
@@ -199,6 +179,7 @@
             </div>
           </div>
           <div class="modal-footer">
+              <button type="button" class="btn btn-white" data-dismiss="modal">Nuevo</button>
             <button type="button" class="btn btn-white" data-dismiss="modal">Recordar</button>
           </div>
         </div>
@@ -231,7 +212,7 @@
                    <div class="row adicionales-body">
                    <h4 class="espproducto10" style="margin-left: 44px;">DATOS DE PULSOS&nbsp;</h4>
                <div class="col-lg-12 adicionales-content">
-                  <br><br>
+                   <br><br>
                   <div class="row">
                      <div class="col-lg-6 col-sm-6">
                         <div class="row">
@@ -255,7 +236,6 @@
                            <label id="apellido-error" for="pulsomax-n" class="error" style="margin-left: 14px;"></label>
                         </div>
                      </div>
-       
                   </div>
                   
             
@@ -265,17 +245,39 @@
                   <h4 class="espproducto10" style="margin-left: 44px;">DATOS DE PASOS&nbsp;</h4>
                   <br> <br> 
                   <div class="row">
-                     <div class="colg-lg-12 col-sm-12">
-                      <spam class="mejora4-a">Pasos Minimos:</spam>
-                         <input id="pasosmin-ID" name="pasosmin-n" type="text" class="cliente4imput-1-a" placeholder="" aria-describedby="">
-                        
+                      <div class="col-lg-6 col-sm-6">
+                        <div class="row">
+                           <div class="col-lg-6 col-sm-6">
+                              <spam class="mejora9-2">Pasos Minimos:</spam>
+                           </div>
+                           <div class="col-lg-6 col-sm-6">
+                              <input id="pasosmin-ID" name="pasosmin-n" type="text" class="cliente4imput-1-a" placeholder="" aria-describedby="">
+                           </div>
+                           <label id="pasosmin-error" for="pulsomin-n" class="error" style="margin-left: 48px;"></label>
+                        </div>
+                     </div>
+                     <div class="col-lg-6 col-sm-6">
+                        <div class="row">
+                           <div class="col-lg-6 col-sm-6">
+                           </div>
+                           <div class="col-lg-6 col-sm-6">
+                           </div>
+                        </div>
                      </div>
                   </div>
                   <br>
                   <hr class="line-4">
                   <br> 
                   <h4 class="espproducto10" style="margin-left: 44px;">RECORDATORIOS&nbsp;</h4>
-                  <br> <br>
+
+                   <br><br>
+                   <div class="row">
+                     <div class="colg-lg-12 col-sm-12">
+                      <spam class="mejora4-a" onclick="abrirRecordatorio()" >Nuevo</spam>
+                     </div>
+                  </div>
+
+                  <br>
                    <div class="col-lg-12 adicionales-content">
                 <div class="row">
                   <div class="col-lg-12 col-sm-12">
@@ -322,19 +324,13 @@
                   </div>
                 </div>
                        </div>
-                  <div class="row">
-                     <div class="colg-lg-12 col-sm-12">
-                      <spam class="mejora4-a">ABRIR</spam>
-                       
-                        
-                     </div>
-                  </div>
+
                 
                </div>
             </div>
              <br>
               <br>
-        <p><a class="btn btn-lg btn-success" onclick="abrirRecordatorio()" role="button">Configurar</a></p>
+        <p><a class="btn btn-lg btn-success" role="button">Configurar</a></p>
       </div>
 
  
