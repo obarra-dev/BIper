@@ -75,11 +75,7 @@ credencialAmazon = ParserObject(json.dumps(config.credencialAmazon))
 # print(alarmaPersonalizadaAlejamiento.texto)
 # print(alarmaPersonalizadaAlejamiento.pathAudio)
 
-zonaSeguridadDistanciaMaxima = ParserObject(json.dumps(config.alejamiento.distanciaMax))
-zonaSeguridadLatitud = ParserObject(json.dumps(config.alejamiento.origenX))
-zonaSeguridadlongitud = ParserObject(json.dumps(config.alejamiento.origenY))
-print("Limite: %s, Latitud: %s, Longitud: %s" % (
-zonaSeguridadDistanciaMaxima, zonaSeguridadLatitud, zonaSeguridadlongitud))
+
 
 for r in config.recordatorios:
     recordar = ParserObject(json.dumps(r))
@@ -89,9 +85,7 @@ for r in config.recordatorios:
     # print(alarma.texto)
     print(alarma.pathAudio)
 
-    horarioActivacionRecordatorio = ParserObject(
-        json.dumps(recordar.horario))  # hora:min para activar de ese recordatorio.
-    print(horarioActivacionRecordatorio)
+
 
     # Let's use Amazon S3
     s3 = boto3.resource('s3', aws_access_key_id=credencialAmazon.keyId,
@@ -102,7 +96,7 @@ for r in config.recordatorios:
     #	for key in bucket.objects.all():
     #		print(key.key)
 
-    pathDestinoBaston = '/home/pi/Proyectos/baston/archivos/' + alarma.id + '.mp3'
+    pathDestinoBaston = '/home/pi/Proyectos/baston/archivos/ddsd.mp3'
     # descargar un audio
     myBucket = s3.Bucket('biaudios')
     nombreAud = myBucket.Object(alarma.pathAudio)  # nombre del archivo del recordatorio.

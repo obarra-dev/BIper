@@ -15,7 +15,13 @@ from rest_framework.renderers import JSONRenderer
 from wsbi.ParserObject import  ParserObject
 import json
 from datetime import  timedelta
+import boto3
 
+
+ACCESS_KEY_ID = 'AKIAJFK7RKWAFMDUEIEQ'
+ACCESS_SECRET_KEY = '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'
+
+BUCKET_NAME = 'biaudios'
 
 class JSONResponse(HttpResponse):
     def __init__(self, data, **kwargs):
@@ -31,8 +37,96 @@ def configuracion(request):
         usuariosBas = UsuarioBaston.objects.all()
         for user in usuariosBas:
             if user.email == request.POST.get('inputEmail', ''):
+                con = Configuracion.objects.get(usuarioBaston=user)
+                print(con.id)
+                request.session['id_config'] = con.id
                 return render(request, 'configuracion.html')
     return render(request, 'inicio.html')
+
+@api_view(['GET'])
+def get_datos_sesion(request):
+    if request.method == 'GET':
+        idc = request.session['id_config']
+        return JSONResponse({
+            "id": idc
+        })
+
+def set_datosActividad(request):
+    if request.method == 'POST':
+        print(request.session['id_config'])
+        idConfig = request.POST.get('configAct-name', '')
+        pulsosMin = request.POST.get('pulsoMin-name', '')
+        pulsoMax = request.POST.get('pulsoMax-name', '')
+        pasosMin = request.POST.get('pasosMin-name', '')
+        print(idConfig)
+        print(pulsosMin)
+        print(pulsoMax)
+        print(pasosMin)
+
+        obj = Configuracion.objects.filter(pk=int(idConfig)).update(pasosMin=int(pulsosMin), pulsoMax=int(pulsoMax), pulsoMin=int(pasosMin))
+
+
+    return render(request, 'configuracion.html')
+
+def subir_recordatorio(request):
+    if request.method == 'POST':
+        idConfig = request.POST.get('configRec-name', '')
+        titulo = request.POST.get('titulo-name', '')
+        horamin = request.POST.get('horamin-name', '')
+        #repetir = request.POST.get('repetir-name', '')
+        #recordar = request.POST.get('recordar-name', '')
+        f = request.FILES['docfile']
+        print(f.name)
+        path = 'audios/' + str(idConfig) + '/' +f.name;
+        handle_uploaded_file_amazon(f, path)
+
+        horaminArray = horamin.split(':', 1)
+
+        hora = int(horaminArray[0])
+        min = int(horaminArray[1][:2])
+
+        al = AlarmaPersonalizada(pathAudio=path)
+        al.save()
+
+        objrec = Recordatorio(
+            alarmaPersonalizada=al,
+            hora=hora,
+            min=min,
+            titulo=titulo)
+
+        objrec.save()
+
+        objrec.configuracion.add(Configuracion.objects.get(pk=idConfig))
+
+        """
+        files = request.FILES.getlist('file-name')
+        for f in files:
+            handle_uploaded_file(f)
+        """
+
+
+    return render(request, 'configuracion.html')
+
+def handle_uploaded_file_amazon(f, path):
+    s3 = boto3.resource('s3', aws_access_key_id=ACCESS_KEY_ID, aws_secret_access_key=ACCESS_SECRET_KEY)
+    # muestra todos los elementos de todos los bucket
+    myBucket = s3.Bucket('biaudios')
+    myBucket.Object(path).put(Body=f.read())
+
+def handle_uploaded_file_data(f):
+    with open('archivoddxx.ogg', 'wb') as destination:
+        destination.write(f.read())
+
+
+def handle_uploaded_file(f):
+    with open('archivodd.ogg', 'wb') as destination:
+        #destination.write(f)
+        for chunk in f.chunks():
+            print("omarkap")
+            destination.write(chunk)
+
+
+
 
 def estadistica(request):
     return render(request,'estadistica.html')
@@ -221,6 +315,17 @@ def set_config(request, pk):
 
 @csrf_exempt
 def testj(request):
+    # Let's use Amazon S3
+    print(ACCESS_KEY_ID)
+    print(ACCESS_SECRET_KEY)
+    s3 = boto3.resource('s3', aws_access_key_id=ACCESS_KEY_ID, aws_secret_access_key=ACCESS_SECRET_KEY)
+    # muestra todos los elementos de todos los bucket
+    for bucket in s3.buckets.all():
+        for key in bucket.objects.all():
+            print(key.key)
+    myBucket = s3.Bucket('biaudios')
+    with open('archivodd.ogg', 'rb') as data:
+        myBucket.Object('ejemplos/archivoddDJ.ogg').put(Body=data)
     if request.method == 'GET':
         return JSONResponse({
             "id": 2,

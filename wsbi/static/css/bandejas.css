@@ -319,3 +319,7 @@
 .notif-line {
 	margin: 10px 0px 10px 0px;
 }
+
+.actividad-body {
+    min-height: 300px;
+}

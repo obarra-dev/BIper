@@ -1,10 +1,13 @@
 from django.contrib import admin
-from .models import UsuarioBaston, PasosHistorico, PulsosHistorico, TrayectoriaHistorico
+from .models import *
 
 admin.site.register(UsuarioBaston)
 admin.site.register(PasosHistorico)
 admin.site.register(PulsosHistorico)
 admin.site.register(TrayectoriaHistorico)
+admin.site.register(AlarmaPersonalizada)
+admin.site.register(Configuracion)
+admin.site.register(Recordatorio)
 
 
 # Register your models here.
