@@ -7,6 +7,7 @@ class UsuarioBaston(models.Model):
     dni = models.IntegerField(default=0)
     mac = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)
+    password = models.CharField(max_length=100,blank=True,null=True)
     idTelegram = models.IntegerField(default=0)
 
 class CredencialAmazon(models.Model):
@@ -45,6 +46,7 @@ class Alejamiento(models.Model):
     distanciaMax = models.IntegerField(default=100)
     origenX = models.CharField(max_length=50)
     origenY = models.CharField(max_length=50)
+    dirreccion = models.CharField(max_length=200, blank=True,null=True)
 
 class Recordatorio(models.Model):
     configuracion = models.ManyToManyField(Configuracion)
@@ -54,6 +56,7 @@ class Recordatorio(models.Model):
     )
     hora = models.IntegerField(default=0)
     min = models.IntegerField(default=0)
+    fecha = models.CharField(max_length=10, blank=True,null=True)
     titulo = models.CharField(max_length=100)
     repeticion = models.IntegerField(default=0)
 

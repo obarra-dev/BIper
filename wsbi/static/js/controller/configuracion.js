@@ -23,6 +23,7 @@
                 },
                 dataType : "json",
                 success: function (data) {
+                    alert(data.alejamiento.distanciaMax)
                     pulsoMin = data.pulsoMin;
                     pulsoMax =data.pulsoMax;
                     pasosMin = data.pasosMin;

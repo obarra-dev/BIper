@@ -1,4 +1,4 @@
-
+</head>
 
 <!DOCTYPE html>
 <!-- saved from url=(0040)http://getbootstrap.com/examples/signin/ -->
@@ -20,9 +20,6 @@
 
   <!-- Custom styles for this template -->
     <link href="/static/css/justified-nav.css" rel="stylesheet">
-
-	<script src="/static/js/jquery-3.2.1.min.js"></script>
-	<script src="/static/js/controller/recorrido.js"></script>
 
 
   </head>
@@ -57,7 +54,25 @@
 
 								<div class="row">
 									<div class="col-lg-12">
-										<iframe width = "100%" height = "350" frameborder = "0" width margin = "0" marginheight = "0" scrolling = "no"> </ iframe>
+										<div id="map" style="height:350px;">
+										</div>
+										<script>
+										 	var map;
+										 	var infowindow;
+										 	var geocoder;
+											function initMap() {
+												map = new google.maps.Map(document.getElementById("map"), {
+															center: {lat: -34.6704143, lng: -58.5629288},
+															zoom: 16
+												        });
+												infowindow = new google.maps.InfoWindow({
+											    	content: ''
+											    });
+												geocoder = new google.maps.Geocoder;
+											};
+										</script>
+										 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaDGXmc9qgQCVaVtGYZSWtGY3RwQdwuiM&callback=initMap&language=es&region=AR">
+										</script>
 									</div>
 								</div>
 
@@ -80,7 +95,11 @@
 		<!--end page-wrapper-->
 	</div>
 
-<script src="/static/js/bootstrap.min.js"></script>
+
+
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/controller/recorrido.js"></script>
 
 </body>
 </html>

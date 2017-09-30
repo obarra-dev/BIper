@@ -5,7 +5,7 @@ from rest_framework.serializers import PrimaryKeyRelatedField
 class UsuarioBastonSerializer(ModelSerializer):
     class Meta:
         model = UsuarioBaston
-        fields = ('id', 'nombre', 'apellido', 'dni','mac', 'email', 'idTelegram')
+        fields = ('id', 'nombre', 'apellido', 'dni','mac', 'email','password', 'idTelegram')
 
 class CredencialAmazonSerializer(ModelSerializer):
     class Meta:
@@ -26,13 +26,13 @@ class AlejamientoSerializer(ModelSerializer):
     alarmaPersonalizada = AlarmaPersonalizadaSerializer(read_only=True)
     class Meta:
         model = Alejamiento
-        fields = ('id', 'distanciaMax', 'origenX', 'origenY', 'alarmaPersonalizada')
+        fields = ('id', 'distanciaMax', 'origenX', 'origenY', 'alarmaPersonalizada', 'dirreccion')
 
 class RecordatorioSerializer(ModelSerializer):
     alarmaPersonalizada = AlarmaPersonalizadaSerializer(read_only=True)
     class Meta:
         model = Recordatorio
-        fields = ('id', 'hora', 'min','titulo', 'repeticion', 'alarmaPersonalizada')
+        fields = ('id', 'hora', 'min', 'fecha','titulo', 'repeticion', 'alarmaPersonalizada')
 
 class ConfiguracionSerializer(ModelSerializer):
     alejamiento = AlejamientoSerializer(read_only=True)

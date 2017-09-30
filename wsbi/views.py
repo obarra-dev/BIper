@@ -35,8 +35,12 @@ def inicio(request):
 def configuracion(request):
     if request.method == 'POST':
         usuariosBas = UsuarioBaston.objects.all()
+        userw = request.POST.get('inputEmail', '')
+        passw = request.POST.get('inputPassword', '')
+        print(passw)
+        print(userw)
         for user in usuariosBas:
-            if user.email == request.POST.get('inputEmail', ''):
+            if user.email == userw and user.password == passw:
                 con = Configuracion.objects.get(usuarioBaston=user)
                 print(con.id)
                 request.session['id_config'] = con.id
@@ -73,6 +77,8 @@ def subir_recordatorio(request):
         idConfig = request.POST.get('configRec-name', '')
         titulo = request.POST.get('titulo-name', '')
         horamin = request.POST.get('horamin-name', '')
+        fecha = request.POST.get('fecha-name', '')
+
         #repetir = request.POST.get('repetir-name', '')
         #recordar = request.POST.get('recordar-name', '')
         f = request.FILES['docfile']
@@ -90,6 +96,7 @@ def subir_recordatorio(request):
 
         objrec = Recordatorio(
             alarmaPersonalizada=al,
+            fecha=fecha,
             hora=hora,
             min=min,
             titulo=titulo)
