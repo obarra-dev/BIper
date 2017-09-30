@@ -177,6 +177,21 @@ def get_recorrido_semanal(request):
         serializer = TrayectoriaHistoricoSerializer(c, many=True)
         return JSONResponse(serializer.data)
 
+@api_view(['GET'])
+def get_recorrido_por_fecha(request, fecha):
+    if request.method == 'GET':
+        dia = int(fecha[:2])
+        print(dia)
+        mes = int(fecha[2:4])
+        print(mes)
+        anio = int(fecha[4:])
+        print(anio)
+        c = TrayectoriaHistorico.objects.filter(fecha__year=anio,
+                                                fecha__month=mes,
+                                                fecha__day=dia)
+        serializer = TrayectoriaHistoricoSerializer(c, many=True)
+        return JSONResponse(serializer.data)
+
 @api_view(['POST'])
 def set_pasos_frecuencias(request):
     if request.method == 'POST':
