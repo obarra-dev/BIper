@@ -39,10 +39,10 @@ class Alejamiento(models.Model):
         Configuracion,
         on_delete=models.CASCADE
     )
-    alarmaPersonalizada = models.OneToOneField(
-        AlarmaPersonalizada,
-        on_delete=models.CASCADE
-    )
+    #alarmaPersonalizada = models.OneToOneField(
+     #   AlarmaPersonalizada,
+      #  on_delete=models.CASCADE
+    #)
     distanciaMax = models.IntegerField(default=100)
     origenX = models.CharField(max_length=50)
     origenY = models.CharField(max_length=50)

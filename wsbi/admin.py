@@ -8,6 +8,7 @@ admin.site.register(TrayectoriaHistorico)
 admin.site.register(AlarmaPersonalizada)
 admin.site.register(Configuracion)
 admin.site.register(Recordatorio)
-
+admin.site.register(CredencialAmazon)
+admin.site.register(Alejamiento)
 
 # Register your models here.

@@ -26,15 +26,18 @@
 
 	<link type="text/css" rel="stylesheet" href="/static/jquery-ui/jquery-ui.css" />
 	<link type="text/css" rel="stylesheet" href="/static/jquery-ui/jquery-ui.theme.css" />
+    <!--<link type="text/css" rel="stylesheet" href="/static/css/font-awesome.min.css" />-->
 
-	
+
 	<link rel="stylesheet" type="text/css" href="/static/css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="/static/css/component.css" />
 		<!-- remove this if you use Modernizr -->
 		<script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
+
+
   </head>
   <!-- BEGIN MODAL -->
-<form name="datoActividadForm" method="post" action="set_datosActividad">
+<form name="datoActividadForm" id="datoActividadForm-ID" method="post" action="set_datosActividad">
      {% csrf_token %}
 <input name="configAct-name" id="configAct-id" type="hidden" >
 <div class="modal fade" id="datosActividad-ID" tabindex="-1">
@@ -63,12 +66,12 @@
                                  <spam class="mejora9">Pulso Minimo:&nbsp;</spam>
                               </div>
                               <div class="col-lg-6">
-                                 <input name="pulsoMin-name" id="pulsoMin-id" type="text" class="cliente10-imput-1-e" placeholder="" >
+                                 <input name="pulsoMinname" id="pulsoMinID" type="text" class="cliente10-imput-1-e" placeholder="" >
                               </div>
                            </div>
                            <div class="row">
                               <div class="col-lg-11 col-lg-offset-1">
-                                 <label for="pulsoMin-name" class="error"></label>
+                                 <label for="pulsoMinname" class="error"></label>
                               </div>
                            </div>
                         </div>
@@ -78,12 +81,12 @@
                                  <spam class="mejora9">Pulso Maximo:&nbsp;</spam>
                               </div>
                               <div class="col-lg-6">
-                                 <input name="pulsoMax-name" id="pulsoMax-id" type="text" class="cliente10-imput-1-e" placeholder="">
+                                 <input name="pulsoMaxname" id="pulsoMaxID" type="text" class="cliente10-imput-1-e" placeholder="">
                               </div>
                            </div>
                            <div class="row">
                               <div class="col-lg-11 col-lg-offset-1">
-                                 <label  for="pulsoMax-nam" class="error"></label>
+                                 <label  for="pulsoMaxname" class="error"></label>
                               </div>
                            </div>
                         </div>
@@ -105,12 +108,12 @@
                                  <spam class="mejora9">Pasos Minimos:&nbsp;</spam>
                               </div>
                               <div class="col-lg-6">
-                                 <input name="pasosMin-name" id="pasosMin-id" type="text" class="cliente10-imput-1-e" placeholder="" >
+                                 <input name="pasosMinname" id="pasosMinID" type="text" class="cliente10-imput-1-e" placeholder="" >
                               </div>
                            </div>
                            <div class="row">
                               <div class="col-lg-11 col-lg-offset-1">
-                                 <label for="pasosMin-name" class="error"></label>
+                                 <label for="pasosMinname" class="error"></label>
                               </div>
                            </div>
                         </div>
@@ -131,7 +134,7 @@
 </form>
 
   <!-- BEGIN MODAL -->
-  <form name="subirArchivoForm" method="post" action="subir_recordatorio" enctype="multipart/form-data">
+  <form name="subirArchivoForm" id="subirArchivoFormID" method="post" action="subir_recordatorio" enctype="multipart/form-data">
  {% csrf_token %}
     <input name="configRec-name" id="configRec-id" type="hidden" >
     <div class="modal fade" id="recordatorio-ID" tabindex="-1">
@@ -157,7 +160,7 @@
                 <div class="row">
                   <div class="col-lg-12 col-sm-12">
                     <div class="col-lg-10 col-lg-offset-1">
-                       <input class="input" placeholder="Evento sin título" name="titulo-name" id="titulo-ID" >
+                       <input class="input" placeholder="Evento sin título" name="tituloname" id="titulo-ID" >
                     </div>
                   </div>
                 </div>
@@ -196,10 +199,10 @@
                        Avisarme un día:
                     </div>
 					<div class="col-lg-4">
-                        <input type="text" class="input"  name="fecha-name" id="fecha-ID">
+                        <input type="text" class="input"  name="fechaname" id="fecha-ID">
                     </div>
 					<div class="col-lg-2">
-                      <select name="horamin-name" id='horamin-ID' class="select">
+                      <select name="horaminname" id='horamin-ID' class="select">
                             <option>00:00 AM</option><option>00:30 AM</option><option>01:00 AM</option><option>01:30 AM</option><option>02:00 AM</option><option>02:30 AM</option>
 							<option>03:00 AM</option><option>03:30 AM</option><option>04:00 AM</option><option>04:30 AM</option><option>05:00 AM</option><option>05:30 AM</option>
 							<option>06:00 AM</option><option>06:30 AM</option><option>07:00 AM</option><option>07:30 AM</option><option>08:00 AM</option><option>08:30 AM</option>
@@ -272,7 +275,6 @@
             </div>
           </div>
           <div class="modal-footer">
-              <button type="button" class="btn btn-white" >Nuevo</button>
             <button type="button" class="btn btn-white" onclick="uploadRecordatorio()" >Recordar</button>
           </div>
         </div>
@@ -295,6 +297,7 @@
             <li class="active"><a href="configuracion">Configuración</a></li>
             <li><a href="recorrido">Recorrido</a></li>
             <li><a href="estadistica">Estadistica</a></li>
+            <li><a href="zonaseguridad">Zona de Seguridad</a></li>
             
           </ul>
         </nav>
@@ -380,7 +383,7 @@
                    <div class="col-lg-12 adicionales-content">
                 <div class="row">
                   <div class="col-lg-12 col-sm-12">
-                    <table class=" table-striped table-hover" id="tablerecordatorios-ID">
+                    <table id="tablerecordatorios-ID">
                       <thead>
                         <tr>
                           <th style="width: 10%;">
@@ -414,7 +417,6 @@
                               <em aria-hidden="true" class="fa fa-caret-up" style="cursor:pointer"></em>
                             </strong>
                           </th>
-
                         </tr>
                       </thead>
                       <tbody>
@@ -463,6 +465,59 @@
 	<script type="text/javascript">
 	$(document).ready(function(){
 		configurarCalendariosJQ("fecha-ID");
+
+		 $("#datoActividadForm-ID").validate({
+              rules:{
+                pulsoMinname : {
+                  required : true
+                },
+                pulsoMaxname : {
+                  required : true
+                },
+                pasosMinname : {
+                  required : true
+                }
+              },
+              messages:{
+                pulsoMinname : {
+                  required : "Debe completar el campo"
+                },
+                pulsoMaxname : {
+                  required : "Debe completar el campo"
+                },
+                pasosMinname : {
+                  required :"Debe completar el campo"
+                }
+              }
+            });
+
+         $("#subirArchivoFormID").validate({
+              rules:{
+                tituloname : {
+                  required : true
+                },
+                fechaname : {
+                  required : true
+                },
+                horaminname : {
+                  required : true
+                }
+              },
+              messages:{
+                tituloname : {
+                  required : "Debe completar el campo"
+                },
+                fechaname : {
+                  required : "Debe completar el campo"
+                },
+                horaminname : {
+                  required : "Debe completar el campo"
+                }
+              }
+            });
 	});
+
+
+
     </script>
 </body></html>

@@ -23,10 +23,9 @@ class AlarmaPersonalizadaSerializer(ModelSerializer):
         fields = ('id', 'texto', 'pathAudio')
 
 class AlejamientoSerializer(ModelSerializer):
-    alarmaPersonalizada = AlarmaPersonalizadaSerializer(read_only=True)
     class Meta:
         model = Alejamiento
-        fields = ('id', 'distanciaMax', 'origenX', 'origenY', 'alarmaPersonalizada', 'dirreccion')
+        fields = ('id', 'distanciaMax', 'origenX', 'origenY', 'dirreccion')
 
 class RecordatorioSerializer(ModelSerializer):
     alarmaPersonalizada = AlarmaPersonalizadaSerializer(read_only=True)

@@ -23,7 +23,6 @@
                 },
                 dataType : "json",
                 success: function (data) {
-                    alert(data.alejamiento.distanciaMax)
                     pulsoMin = data.pulsoMin;
                     pulsoMax =data.pulsoMax;
                     pasosMin = data.pasosMin;
@@ -77,7 +76,7 @@ function setTablaRecordatorios(recordatorios) {
         var horamin =  String("0" + recordatorios[i].hora).slice(-2) +':'+ String("0" + recordatorios[i].min).slice(-2) ;
         var recor = {
             titulo: recordatorios[i].titulo,
-            fecha: '2017/54/32',
+            fecha: recordatorios[i].fecha,
             horamin: horamin,
             repeticion: recordatorios[i].repeticion
 	    };
@@ -105,29 +104,66 @@ function abrirRecordatorio() {
      $("#side-menu-ID").html('<br> <br>')
     for (i = 0; i < recordatoriosAux.length; i++) {
            var horamin =  String("0" + recordatoriosAux[i].hora).slice(-2) +':'+ String("0" + recordatoriosAux[i].min).slice(-2) ;
-          $("#side-menu-ID").append("<li style=\"list-style: none; border-bottom:0px;\"> <a style=\"padding: 10px !important;\"><span>"+ recordatoriosAux[i].titulo+"<br>"+ horamin+"<br>"+"</span></a><span><hr class=\"line-collapsed\"></span></li>");
+          $("#side-menu-ID").append("<li style=\"list-style: none; border-bottom:0px;\"> <p style=\"padding: 10px !important;\"><span>"+ recordatoriosAux[i].titulo+"<br>"+ horamin+"<br>"+"</span></p><span><hr class=\"line-collapsed\"></span></li>");
     }
       $("#recordatorio-ID").modal();
 }
 
 function abrirDatosActividad() {
-    $("#pulsoMax-id").val(pulsoMax);
-    $("#pulsoMin-id").val(pulsoMin);
-    $("#pasosMin-id").val(pasosMin);
+    $("#pulsoMaxID").val(pulsoMax);
+    $("#pulsoMinID").val(pulsoMin);
+    $("#pasosMinID").val(pasosMin);
     $("#datosActividad-ID").modal();
 }
 
 
 function subirDatosActividad() {
-    $("#configAct-id").val(idActividad);
-    document.datoActividadForm.submit();
-    $("#datosActividad-ID").modal('hide');
+    var form = $( "#datoActividadForm-ID" );
+
+		if (form.valid()){
+			$("#configAct-id").val(idActividad);
+            document.datoActividadForm.submit();
+                $("#datosActividad-ID").modal('hide');
+		}
+
 }
 
+/**
+    var datos = {
+            idConfig: 2,
+            pasosProm: 50,
+            pulsosMax: 100,
+            pulsosMin: 50
+	    };
+            $.ajax({
+               url: '/wsbi/set_datosActividad/',
+		type : 'post',
+		headers : {
+                    'Accept' : 'application/json',
+                    'Content-Type' : 'application/json'
+                },
+		contentType : 'application/json',
+		dataType : 'json',
+		data : JSON.stringify(datos),
+                success: function (data) {
+                    alert('OK');
+                    $("#datosActividad-ID").modal('hide');
+                },
+                error : function(jqXHR, exception) {
+                },
+            });
+
+**/
 
 function uploadRecordatorio() {
-    $("#configRec-id").val(idActividad);
-	document.subirArchivoForm.submit();
-    $("#recordatorio-ID").modal('hide');
+        var form = $( "#subirArchivoFormID" );
+
+		if (form.valid()){
+            $("#configRec-id").val(idActividad);
+            document.subirArchivoForm.submit();
+            $("#recordatorio-ID").modal('hide');
+		}
+
+
 }
 

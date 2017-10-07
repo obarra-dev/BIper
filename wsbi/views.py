@@ -33,6 +33,9 @@ def inicio(request):
     return render(request,'inicio.html')
 
 def configuracion(request):
+    return render(request, 'configuracion.html')
+
+def loginUser(request):
     if request.method == 'POST':
         usuariosBas = UsuarioBaston.objects.all()
         userw = request.POST.get('inputEmail', '')
@@ -55,13 +58,14 @@ def get_datos_sesion(request):
             "id": idc
         })
 
+
 def set_datosActividad(request):
     if request.method == 'POST':
         print(request.session['id_config'])
         idConfig = request.POST.get('configAct-name', '')
-        pulsosMin = request.POST.get('pulsoMin-name', '')
-        pulsoMax = request.POST.get('pulsoMax-name', '')
-        pasosMin = request.POST.get('pasosMin-name', '')
+        pulsosMin = request.POST.get('pulsoMinname', '')
+        pulsoMax = request.POST.get('pulsoMaxname', '')
+        pasosMin = request.POST.get('pasosMinname', '')
         print(idConfig)
         print(pulsosMin)
         print(pulsoMax)
@@ -69,8 +73,20 @@ def set_datosActividad(request):
 
         obj = Configuracion.objects.filter(pk=int(idConfig)).update(pasosMin=int(pulsosMin), pulsoMax=int(pulsoMax), pulsoMin=int(pasosMin))
 
-
     return render(request, 'configuracion.html')
+"""
+@api_view(['POST'])
+@csrf_exempt
+def set_datosActividad(request):
+    if request.method == 'POST':
+        c = json.dumps(request.data)
+        pasosFrecs = ParserObject(c)
+        obj = Configuracion.objects.filter(pk=int(pasosFrecs.idConfig)).update(pasosMin=int(pasosFrecs.pasosProm), pulsoMax=int(pasosFrecs.pulsosMax),
+                                                                    pulsoMin=int(pasosFrecs.pulsosMin))
+        return JSONResponse({
+            "res": "OK"
+        })
+"""
 
 def subir_recordatorio(request):
     if request.method == 'POST':
@@ -140,6 +156,37 @@ def estadistica(request):
 
 def recorrido(request):
     return render(request,'recorrido.html')
+
+def zonaseguridad(request):
+    return render(request,'zonaseguridad.html')
+
+def set_zonaseguridad(request):
+    if request.method == 'POST':
+        idConfig = request.session['id_config']
+        address = request.POST.get('address-name', '')
+        latitude = request.POST.get('latitude-name', '')
+        longitude = request.POST.get('longitude-name', '')
+        distance = request.POST.get('distance-name', '')
+
+        obj = Alejamiento(
+            id=idConfig,
+            configuracion=Configuracion.objects.get(pk=idConfig),
+            distanciaMax=distance,
+            origenX=latitude,
+            origenY=longitude,
+            dirreccion = address)
+        obj.save()
+
+    return render(request, 'zonaseguridad.html')
+
+@api_view(['GET'])
+def get_zonaseguridad(request):
+    if request.method == 'GET':
+        idConfig = request.session['id_config']
+        con = Configuracion.objects.get(pk=idConfig)
+        obj = Alejamiento.objects.filter(configuracion=con)
+        serializer = AlejamientoSerializer(obj, many=True)
+        return JSONResponse(serializer.data)
 
 
 @api_view(['GET'])

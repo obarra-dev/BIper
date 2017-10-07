@@ -1,4 +1,5 @@
-
+// Cruz para errores de validator
+var cross = "<em class='fa fa-times-circle-o' aria-hidden='true'></em>&nbsp;";
 
 function configurarCalendariosJQ(fechaDesdeID,fechaHastaID){
 	configurarCalendarioPrincipalJQ();
