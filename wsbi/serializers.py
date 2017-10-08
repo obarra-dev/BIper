@@ -1,4 +1,4 @@
-from wsbi.models import  UsuarioBaston, Configuracion, Interesado, AlarmaPersonalizada, Alejamiento, Recordatorio, CredencialAmazon, PasosHistorico, TrayectoriaHistorico
+from wsbi.models import  UsuarioBaston, Configuracion, Interesado, AlarmaPersonalizada, Alejamiento, Recordatorio, CredencialAmazon, PasosHistorico, PulsosHistorico, TrayectoriaHistorico
 from rest_framework.serializers import ModelSerializer
 from rest_framework.serializers import PrimaryKeyRelatedField
 
@@ -43,6 +43,11 @@ class ConfiguracionSerializer(ModelSerializer):
         model = Configuracion
         fields = ('id', 'pasosMin', 'pulsoMax', 'pulsoMin', 'alejamiento','usuarioBaston','credencialAmazon','interesados', 'recordatorios')
 
+
+class PulsosHistoricoSerializer(ModelSerializer):
+    class Meta:
+        model = PulsosHistorico
+        fields = ('id', 'fecha', 'pulsosMax', 'pulsosMin')
 
 
 class PasosHistoricoSerializer(ModelSerializer):

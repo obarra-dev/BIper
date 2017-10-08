@@ -190,11 +190,22 @@ def get_zonaseguridad(request):
 
 
 @api_view(['GET'])
+def get_pulsos_hitoricos(request):
+    if request.method == 'GET':
+        snippets = PulsosHistorico.objects.all()
+        serializer = PulsosHistoricoSerializer(snippets, many=True)
+        return JSONResponse(serializer.data)
+
+@api_view(['GET'])
 def get_pasos_hitoricos(request):
     if request.method == 'GET':
         snippets = PasosHistorico.objects.all()
         serializer = PasosHistoricoSerializer(snippets, many=True)
         return JSONResponse(serializer.data)
+
+
+
+
 
 @api_view(['GET'])
 def get_recorridos_hitoricos(request):
@@ -207,12 +218,31 @@ def get_recorridos_hitoricos(request):
 @api_view(['GET'])
 def get_pasos_semanal(request):
     if request.method == 'GET':
+        idConfig = request.session['id_config']
+        con = Configuracion.objects.get(pk=idConfig)
+        print(con.usuarioBaston.pk)
+
         dt = datetime.date.today()
         start_date = dt - timedelta(days=dt.weekday())
         end_date = start_date + timedelta(days=7)
-        pasos_semanales = PasosHistorico.objects.filter(fecha__range=(start_date, end_date))
+        pasos_semanales = PasosHistorico.objects.filter(fecha__range=(start_date, end_date), usuarioBaston = con.usuarioBaston)
         print(pasos_semanales)
         serializer = PasosHistoricoSerializer(pasos_semanales, many=True)
+        return JSONResponse(serializer.data)
+
+@api_view(['GET'])
+def get_pulsos_semanal(request):
+    if request.method == 'GET':
+        idConfig = 1
+        #request.session['id_config']
+        con = Configuracion.objects.get(pk=idConfig)
+
+        dt = datetime.date.today()
+        start_date = dt - timedelta(days=dt.weekday())
+        end_date = start_date + timedelta(days=7)
+        pasos_semanales = PulsosHistorico.objects.filter(fecha__range=(start_date, end_date), usuarioBaston = con.usuarioBaston)
+
+        serializer = PulsosHistoricoSerializer(pasos_semanales, many=True)
         return JSONResponse(serializer.data)
 
 @api_view(['GET'])

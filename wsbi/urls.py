@@ -4,6 +4,7 @@ from wsbi import views
 urlpatterns = [
     url(r'^wsbi/set_pasos_frecuencias/$', views.set_pasos_frecuencias),
     url(r'^wsbi/get_pasos_hitoricos$', views.get_pasos_hitoricos),
+    url(r'^wsbi/get_pulsos_hitoricos$', views.get_pulsos_hitoricos),
     url(r'^wsbi/get_recorridos_hitoricos', views.get_recorridos_hitoricos),
     url(r'^wsbi/set_recorrido/$', views.set_recorrido),
     url(r'^wsbi/config$', views.info_config),
@@ -21,6 +22,7 @@ urlpatterns = [
     url(r'^wsbi/get_zonaseguridad$', views.get_zonaseguridad),
     url(r'^wsbi/subir_recordatorio', views.subir_recordatorio),
     url(r'^wsbi/get_pasos_semanal$', views.get_pasos_semanal),
+    url(r'^wsbi/get_pulsos_semanal', views.get_pulsos_semanal),
     url(r'^wsbi/get_recorrido_semanal$', views.get_recorrido_semanal),
     url(r'^wsbi/set_datosActividad', views.set_datosActividad),
     url(r'^wsbi/get_recorrido_por_fecha/(?P<fecha>.+)/$', views.get_recorrido_por_fecha),
