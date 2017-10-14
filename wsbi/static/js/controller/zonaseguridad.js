@@ -58,12 +58,13 @@ function codeAddress() {
 
 function subirDatos() {
    //validaciones
-    var distance = /^([1-9]|[1-9][0-9]|[1-9][0-9][0-9])$/;
+   // var distance = /^([1-9][0-9][0-9]|[1-9][0-9][0-9][0-9])$/;
     if( $("#address").val() == "" ){
             $("#address").focus().after("<span class='error'>Ingrese dirección origen</span>");
             return false;
-        }else if( $("#distance").val() == "" || !distance.test($("#distance").val()) ){
-            $("#distance").focus().after("<span class='error'>Ingrese un rango valido de 1-999</span>");
+        //}else if( $("#distance").val() == "" || !distance.test($("#distance").val()) ){
+        }else if( $("#distance").val() == "" || $("#distance").val() < 100 ){
+            $("#distance").focus().after("<span class='error'>El rango minimo aceptado son 100 metros </span>");
             return false;
          }
     document.formzonaseguridad.submit();

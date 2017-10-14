@@ -1,8 +1,5 @@
-
-
 <!DOCTYPE html>
-<!-- saved from url=(0040)http://getbootstrap.com/examples/signin/ -->
-<html lang="en">
+<html>
  <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
@@ -13,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="http://getbootstrap.com/favicon.ico">
 
-    <title>Recorrido</title>
+    <title>Zona de Seguridad</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
@@ -21,8 +18,8 @@
   <!-- Custom styles for this template -->
     <link href="/static/css/justified-nav.css" rel="stylesheet">
 
-	<script src="/static/js/jquery-3.2.1.min.js"></script>
-	<script src="/static/js/controller/recorrido.js"></script>
+     <!-- Custom styles for datepicker -->
+     <link href="/static/jquery-ui/jquery-ui.css" rel="stylesheet">
 
 
   </head>
@@ -35,53 +32,67 @@
       <!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->
       <div class="masthead">
-        <h3 class="text-muted">BastON</h3>
+        <div align="left"><IMG src="/static/images/logo/logo_baston_top.png"></div>
         <nav>
           <ul class="nav nav-justified">
             <li><a href="configuracion">Configuración</a></li>
-            <li class="active"><a href="recorrido">Recorrido</a></li>
+              <li class="active"><a href="recorrido">Recorrido</a></li>
             <li><a href="estadistica">Estadistica</a></li>
-            <li><a href="zonaseguridad">Zona de Seguridad</a></li>
-            
+              <li><a href="zonaseguridad">Zona de Seguridad</a></li>
+
           </ul>
         </nav>
       </div>
+     </div>
 
-		<div id="page-wrapper" class="jumbotron">
-			<div class="page-content">
-				<div id="tab-general">
-					<div class="row">
-						
+      <br>
 
-						<div id="generalTabContent" class="tab-content responsive">
-							<div id="alert-tab" class="tab-pane fade in active">
+      <div class="row">
+        <div class="col-md-3 col-md-offset-4">
+		<form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="fecha-ID">Fecha</label>
+                        <div class="col-md-9">
+                            <input class="form-control" id="fecha-ID" name="fecha-ID" placeholder="MM/DD/YYYY" type="text"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-3 col-md-4">
+                          <button class="btn btn-primary" id="btn1" type="button" >Obtener Recorrido</button>
+                        </div>
+                    </div>
+        </form>
+        </div>
+      </div>
+    <br>
 
-								<div class="row">
-									<div class="col-lg-12">
-										<iframe width = "100%" height = "350" frameborder = "0" width margin = "0" marginheight = "0" scrolling = "no"> </ iframe>
-									</div>
-								</div>
+     <div class="col-md-10">
+       <iframe width = "80%" height = "400" align="right" scrolling = "no"> </iframe>
+     </div>
 
-							</div>
+    <div class="row"></div>
 
-						</div>
+     <div class="col-sm-offset-5">
+         <h5 class="text-muted"> © Copyright 2017   |   BastON  |   All Rights Reserved  </h5>
+     </div>
 
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/js/controller/recorrido.js"></script>
+	<script src="/static/js/jquery-ui.js"></script>
+	<script src="/static/js/datepicker-es.js"></script>
+	<script src="/static/js/main.js"></script>
+	<script>
+		$(document).ready(function(){
+			configurarCalendariosJQ("fecha-ID");
+		});
+    </script>
+  </body>
 
-					</div>
-				</div>
-				<!--end tab-general-->
-
-                <div id="rec-ID">
-                </div>
-
-			</div>
-			<!--end page-content-->
-
-		</div>
-		<!--end page-wrapper-->
-	</div>
-
-<script src="/static/js/bootstrap.min.js"></script>
-
-</body>
 </html>
+
+
+
+
+	
+
+
