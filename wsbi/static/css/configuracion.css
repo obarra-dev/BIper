@@ -1,15 +1,6 @@
 /* Menu de navegación superior */
 .process a .btn:hover,
-.active > a > .btn {
-	color: #cdb885;
-	border-color: #cdb885;
-}
-.process a {
-	color: #b8b8b8 !important;
-}
-.active a, .process a:hover {
-	color: #cdb885 !important;
-}
+
 .notifications {
 	width: 25px;
 	height: 25px;
@@ -25,10 +16,7 @@
 	pointer-events: none;
 }
 .process a:hover .notifications,
-.active a .notifications {
-	background: #cdb885;
-	border-color: #cdb885;
-}
+
 .notifications > p {
 	padding-top: 5px;
 }

@@ -52,14 +52,14 @@
 
 
 .inputfile-6 + label {
-    border: solid #9c9073 1px;
+    border: solid #ccc 1px;
     padding: 0;
 }
 
 .inputfile-6:focus + label,
 .inputfile-6.has-focus + label,
 .inputfile-6 + label:hover {
-    border-color: #722040;
+    border-color: #337ab7;
 }
 
 .inputfile-6 + label span,
@@ -80,8 +80,8 @@
 
 .inputfile-6 + label strong {
     height: 100%;
-    color: #f1e5e6;
-    background-color: #cdb885!important;
+    color: #ffffff;
+    background-color: #337ab7!important;
     display: inline-block;
 }
 

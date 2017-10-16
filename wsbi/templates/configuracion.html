@@ -3,7 +3,7 @@
 <html lang="en" class="no-js">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -21,8 +21,9 @@
     <!-- Custom styles for this template -->
     <link href="/static/css/justified-nav.css" rel="stylesheet">
 
-	<link href="/static/css/main.css" rel="stylesheet" type="text/css">
-	<link href="/static/css/bandejas.css" rel="stylesheet" type="text/css">
+
+	<link href="/static/css/configuracion.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/main-baston.css" rel="stylesheet" type="text/css">
 
 	<link type="text/css" rel="stylesheet" href="/static/jquery-ui/jquery-ui.css" />
 	<link type="text/css" rel="stylesheet" href="/static/jquery-ui/jquery-ui.theme.css" />
@@ -66,7 +67,7 @@
                                  <spam class="mejora9">Pulso Minimo:&nbsp;</spam>
                               </div>
                               <div class="col-lg-6">
-                                 <input name="pulsoMinname" id="pulsoMinID" type="text" class="cliente10-imput-1-e" placeholder="" >
+                                 <input name="pulsoMinname" id="pulsoMinID" type="text" class="form-control" placeholder="" >
                               </div>
                            </div>
                            <div class="row">
@@ -81,7 +82,7 @@
                                  <spam class="mejora9">Pulso Maximo:&nbsp;</spam>
                               </div>
                               <div class="col-lg-6">
-                                 <input name="pulsoMaxname" id="pulsoMaxID" type="text" class="cliente10-imput-1-e" placeholder="">
+                                 <input name="pulsoMaxname" id="pulsoMaxID" type="text" class="form-control" placeholder="">
                               </div>
                            </div>
                            <div class="row">
@@ -108,7 +109,7 @@
                                  <spam class="mejora9">Pasos Minimos:&nbsp;</spam>
                               </div>
                               <div class="col-lg-6">
-                                 <input name="pasosMinname" id="pasosMinID" type="text" class="cliente10-imput-1-e" placeholder="" >
+                                 <input name="pasosMinname" id="pasosMinID" type="text" class="form-control" placeholder="" >
                               </div>
                            </div>
                            <div class="row">
@@ -126,7 +127,7 @@
             </div>
          </div>
          <div class="modal-footer">
-            <button type="button" class="btn btn-white" onclick="subirDatosActividad()">Aceptar</button>
+            <button type="button" class="btn btn-primary" onclick="subirDatosActividad()">Aceptar</button>
          </div>
       </div>
    </div>
@@ -160,7 +161,7 @@
                 <div class="row">
                   <div class="col-lg-12 col-sm-12">
                     <div class="col-lg-10 col-lg-offset-1">
-                       <input class="input" placeholder="Evento sin título" name="tituloname" id="titulo-ID" >
+                       <input class="form-control" placeholder="Evento sin título" name="tituloname" id="titulo-ID" >
                     </div>
                   </div>
                 </div>
@@ -189,9 +190,9 @@
 					</div>
                   </div>
                 </div>
-				
-				
-				
+
+
+
                 <br><br>
                 <form>
                   <div class="row">
@@ -199,10 +200,10 @@
                        Avisarme un día:
                     </div>
 					<div class="col-lg-4">
-                        <input type="text" class="input"  name="fechaname" id="fecha-ID">
+                        <input type="text" class="form-control"  name="fechaname" id="fecha-ID">
                     </div>
 					<div class="col-lg-2">
-                      <select name="horaminname" id='horamin-ID' class="select">
+                      <select name="horaminname" id='horamin-ID' class="form-control">
                             <option>00:00 AM</option><option>00:30 AM</option><option>01:00 AM</option><option>01:30 AM</option><option>02:00 AM</option><option>02:30 AM</option>
 							<option>03:00 AM</option><option>03:30 AM</option><option>04:00 AM</option><option>04:30 AM</option><option>05:00 AM</option><option>05:30 AM</option>
 							<option>06:00 AM</option><option>06:30 AM</option><option>07:00 AM</option><option>07:30 AM</option><option>08:00 AM</option><option>08:30 AM</option>
@@ -211,13 +212,13 @@
 							<option>15:00 PM</option><option>15:30 PM</option><option>16:00 PM</option><option>16:30 PM</option><option>17:00 PM</option><option>17:30 PM</option>
 							<option>18:00 PM</option><option>18:30 PM</option><option>19:00 PM</option><option>19:30 PM</option><option>20:00 PM</option><option>20:30 PM</option>
 							<option>21:00 PM</option><option>21:30 PM</option><option>22:00 PM</option><option>22:30 PM</option><option>23:00 PM</option><option>23:30 PM</option>
-							
+
                           </select>
                     </div>
 					<div class="col-lg-2">
                        &nbsp;&nbsp;&nbsp;
                     </div>
-                  </div>        
+                  </div>
                   <br>
                 <!--
                   <div class="row">
@@ -237,7 +238,7 @@
 					<div class="col-lg-4">
                       &nbsp;&nbsp;&nbsp;
                     </div>
-					
+
                   </div>
                   <br>
 				  <div class="row">
@@ -266,7 +267,7 @@
 					<div class="col-lg-4">
                       &nbsp;&nbsp;&nbsp;
                     </div>
-					
+
                   </div>
                     -->
                   <br>
@@ -275,14 +276,14 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-white" onclick="uploadRecordatorio()" >Recordar</button>
+            <button type="button" class="btn btn-primary" onclick="uploadRecordatorio()" >Recordar</button>
           </div>
         </div>
       </div>
     </div>
       </form>
     <!-- END MODAL -->
-  
+
 
   <body>
 
@@ -291,21 +292,21 @@
       <!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->
       <div class="masthead">
-        <h3 class="text-muted">BastON</h3>
+         <div align="left"><IMG src="/static/images/logo/logo_baston_top.png"></div>
         <nav>
           <ul class="nav nav-justified">
             <li class="active"><a href="configuracion">Configuración</a></li>
             <li><a href="recorrido">Recorrido</a></li>
-            <li><a href="estadistica">Estadistica</a></li>
+            <li><a href="estadistica">Estadísticas</a></li>
             <li><a href="zonaseguridad">Zona de Seguridad</a></li>
-            
+
           </ul>
         </nav>
       </div>
 
       <!-- Jumbotron -->
       <div class="jumbotron">
-  
+
                    <div class="row adicionales-body">
                    <h4 class="espproducto10" style="margin-left: 44px;">DATOS DE PULSOS&nbsp;</h4>
                <div class="col-lg-12 adicionales-content">
@@ -317,7 +318,7 @@
                               <spam class="mejora9-2">Pulso Minimo</spam>
                            </div>
                            <div class="col-lg-6 col-sm-6">
-                              <input id="pulsomin-ID" name="pulsomin-n" type="text" class="cliente4imput-1" placeholder="" aria-describedby="" disabled>
+                              <input id="pulsomin-ID" name="pulsomin-n" type="text" class="form-control" placeholder="" aria-describedby="" disabled>
                            </div>
                            <label id="nombre-error" for="pulsomin-n" class="error" style="margin-left: 48px;"></label>
                         </div>
@@ -328,19 +329,19 @@
                               <spam class="mejora4-a">Pulso Maximo:</spam>
                            </div>
                            <div class="col-lg-6 col-sm-6">
-                              <input id="pulsomax-ID"  name="pulsomax-n" type="text" class="cliente4imput-1-a" placeholder="" aria-describedby="" disabled>
+                              <input id="pulsomax-ID"  name="pulsomax-n" type="text" class="form-control" placeholder="" aria-describedby="" disabled>
                            </div>
                            <label id="apellido-error" for="pulsomax-n" class="error" style="margin-left: 14px;"></label>
                         </div>
                      </div>
                   </div>
-                  
-            
-          
+
+
+
                   <hr class="line-4">
-                  <br> 
+                  <br>
                   <h4 class="espproducto10" style="margin-left: 44px;">DATOS DE PASOS&nbsp;</h4>
-                  <br> <br> 
+                  <br> <br>
                   <div class="row">
                       <div class="col-lg-6 col-sm-6">
                         <div class="row">
@@ -348,7 +349,7 @@
                               <spam class="mejora9-2">Pasos Minimos:</spam>
                            </div>
                            <div class="col-lg-6 col-sm-6">
-                              <input id="pasosmin-ID" name="pasosmin-n" type="text" class="cliente4imput-1-a" placeholder="" aria-describedby="" disabled>
+                              <input id="pasosmin-ID" name="pasosmin-n" type="text" class="form-control" placeholder="" aria-describedby="" disabled>
                            </div>
                            <label id="pasosmin-error" for="pulsomin-n" class="error" style="margin-left: 48px;"></label>
                         </div>
@@ -369,13 +370,13 @@
                      <div class="col-lg-4 col-sm-4">
                      </div>
                       <div class="col-lg-4 col-sm-4">
-                           <button type="button" class="btn btn-white" onclick="abrirDatosActividad()" >Editar</button>
+                           <button type="button" class="btn btn-primary" onclick="abrirDatosActividad()" >Editar</button>
                      </div>
                   </div>
 
 
                   <hr class="line-4">
-                  <br> 
+                  <br>
                   <h4 class="espproducto10" style="margin-left: 44px;">RECORDATORIOS&nbsp;</h4>
 
                    <br><br>
@@ -432,21 +433,21 @@
                      <div class="col-lg-4 col-sm-4">
                      </div>
                       <div class="col-lg-4 col-sm-4">
-                          <button type="button" class="btn btn-white" onclick="abrirRecordatorio()" >Editar</button>
+                          <button type="button" class="btn btn-primary" onclick="abrirRecordatorio()" >Editar</button>
                      </div>
                   </div>
                        </div>
 
-                
+
                </div>
             </div>
       </div>
 
- 
+
 
       <!-- Site footer -->
       <footer class="footer">
-        <p>2017 proyecto icane.</p>
+          <div class="col-sm-offset-5"><h5 class="text-muted"> © Copyright 2017   |   BastON  |   All Rights Reserved  </h5></div>
       </footer>
 
     </div> <!-- /container -->
