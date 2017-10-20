@@ -71,7 +71,7 @@ def set_datosActividad(request):
         print(pulsoMax)
         print(pasosMin)
 
-        obj = Configuracion.objects.filter(pk=int(idConfig)).update(pasosMin=int(pulsosMin), pulsoMax=int(pulsoMax), pulsoMin=int(pasosMin))
+        obj = Configuracion.objects.filter(pk=int(idConfig)).update(pulsoMin=int(pulsosMin), pulsoMax=int(pulsoMax), pasosMin=int(pasosMin))
 
     return render(request, 'configuracion.html')
 """
@@ -91,16 +91,17 @@ def set_datosActividad(request):
 def subir_recordatorio(request):
     if request.method == 'POST':
         idConfig = request.POST.get('configRec-name', '')
-        titulo = request.POST.get('titulo-name', '')
-        horamin = request.POST.get('horamin-name', '')
-        fecha = request.POST.get('fecha-name', '')
-
+        titulo = request.POST.get('tituloname', '')
+        horamin = request.POST.get('horaminname', '')
+        fecha = request.POST.get('fechaname', '')
+        print(horamin)
         #repetir = request.POST.get('repetir-name', '')
         #recordar = request.POST.get('recordar-name', '')
         f = request.FILES['docfile']
         print(f.name)
         path = 'audios/' + str(idConfig) + '/' +f.name;
         handle_uploaded_file_amazon(f, path)
+
 
         horaminArray = horamin.split(':', 1)
 
@@ -267,6 +268,38 @@ def get_recorrido_por_fecha(request, fecha):
                                                 fecha__month=mes,
                                                 fecha__day=dia)
         serializer = TrayectoriaHistoricoSerializer(c, many=True)
+        return JSONResponse(serializer.data)
+
+@api_view(['GET'])
+def get_rango_pasos(request, desde, hasta):
+    if request.method == 'GET':
+        desdeDate = datetime.datetime.strptime(desde, "%d%m%Y")
+        print(desdeDate)
+        desdeHasta = datetime.datetime.strptime(hasta, "%d%m%Y")
+        desdeHasta = desdeHasta + datetime.timedelta(days=1)
+        print(desdeHasta)
+
+        pasos_semanales = PasosHistorico.objects.filter(fecha__range=(desdeDate, desdeHasta))
+
+        serializer = PasosHistoricoSerializer(pasos_semanales, many=True)
+        return JSONResponse(serializer.data)
+
+
+@api_view(['GET'])
+def get_rango_pulsos(request, desde, hasta):
+    if request.method == 'GET':
+        desdeDate = datetime.datetime.strptime(desde, "%d%m%Y")
+        print(desdeDate)
+        desdeHasta = datetime.datetime.strptime(hasta, "%d%m%Y")
+        desdeHasta = desdeHasta + datetime.timedelta(days=1)
+        print(desdeHasta)
+
+       # pasos_semanales = PulsosHistorico.objects.filter(fecha__range=["2011-01-01", "2011-01-31"])
+        #start_date = datetime.date(2005, 1, 1)
+        #end_date = datetime.date(2005, 3, 31)
+        pulsos_semanales = PulsosHistorico.objects.filter(fecha__range=(desdeDate, desdeHasta)).order_by('fecha')
+
+        serializer = PulsosHistoricoSerializer(pulsos_semanales, many=True)
         return JSONResponse(serializer.data)
 
 @api_view(['POST'])

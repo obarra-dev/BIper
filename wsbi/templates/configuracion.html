@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <!-- saved from url=(0048)http://getbootstrap.com/examples/justified-nav/# -->
 <html lang="en" class="no-js">
-  <head>
+<style>
+      .padd-b {
+    padding: 0px;
+    padding-top: 0px;
+    padding-right: 2px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+}
+</style>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,13 +44,15 @@
 		<script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
 
 
+
+
   </head>
   <!-- BEGIN MODAL -->
 <form name="datoActividadForm" id="datoActividadForm-ID" method="post" action="set_datosActividad">
      {% csrf_token %}
 <input name="configAct-name" id="configAct-id" type="hidden" >
 <div class="modal fade" id="datosActividad-ID" tabindex="-1">
-   <div class="modal-dialog" style="width: 50%;">
+   <div class="modal-dialog" style="width: 58%;">
       <div class="modal-content">
          <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
@@ -50,7 +60,7 @@
          </div>
          <div class="modal-body">
             <div class="row actividad-body">
-               <div class="col-lg-12 adicionales-content">
+               <div class="col-lg-12 col-md-12 adicionales-content">
                   <div class="col-lg-12">
                      <br>
                      <h4 class="espproducto10">Datos de Pulsos&nbsp;:
@@ -63,10 +73,10 @@
                      <div class="row">
                         <div class="col-lg-6 col-sm-6">
                            <div class="row">
-                              <div class="col-lg-6">
-                                 <spam class="mejora9">Pulso Minimo:&nbsp;</spam>
+                              <div class="col-lg-4">
+                                  <label class="control-label padd-b">Pulso Minimo:&nbsp;</label>
                               </div>
-                              <div class="col-lg-6">
+                              <div class="col-lg-8">
                                  <input name="pulsoMinname" id="pulsoMinID" type="text" class="form-control" placeholder="" >
                               </div>
                            </div>
@@ -78,10 +88,10 @@
                         </div>
                         <div class="col-lg-6 col-sm-6">
                            <div class="row">
-                              <div class="col-lg-6">
-                                 <spam class="mejora9">Pulso Maximo:&nbsp;</spam>
+                              <div class="col-lg-4">
+                                 <label class="control-label padd-b">Pulso Maximo:&nbsp;</label>
                               </div>
-                              <div class="col-lg-6">
+                              <div class="col-lg-8">
                                  <input name="pulsoMaxname" id="pulsoMaxID" type="text" class="form-control" placeholder="">
                               </div>
                            </div>
@@ -105,10 +115,10 @@
                      <div class="row">
                         <div class="col-lg-6 col-sm-6">
                            <div class="row">
-                              <div class="col-lg-6">
-                                 <spam class="mejora9">Pasos Minimos:&nbsp;</spam>
+                              <div class="col-lg-4">
+                                 <label class="control-label padd-b">Pasos Minimos:&nbsp;</label>
                               </div>
-                              <div class="col-lg-6">
+                              <div class="col-lg-8">
                                  <input name="pasosMinname" id="pasosMinID" type="text" class="form-control" placeholder="" >
                               </div>
                            </div>
@@ -143,7 +153,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-            <h4 class="modal-title">Configurar recordatorio </h4>
+            <h4 class="modal-title">Crear recordatorio </h4>
           </div>
           <div class="modal-body">
             <div class="row adicionales-body">
@@ -315,7 +325,7 @@
                      <div class="col-lg-6 col-sm-6">
                         <div class="row">
                            <div class="col-lg-6 col-sm-6">
-                              <spam class="mejora9-2">Pulso Minimo</spam>
+                              <label class="control-label">Pulso Minimo</label>
                            </div>
                            <div class="col-lg-6 col-sm-6">
                               <input id="pulsomin-ID" name="pulsomin-n" type="text" class="form-control" placeholder="" aria-describedby="" disabled>
@@ -326,7 +336,7 @@
                      <div class="col-lg-6 col-sm-6">
                         <div class="row">
                            <div class="col-lg-6 col-sm-6">
-                              <spam class="mejora4-a">Pulso Maximo:</spam>
+                              <label class="control-label">Pulso Maximo:</label>
                            </div>
                            <div class="col-lg-6 col-sm-6">
                               <input id="pulsomax-ID"  name="pulsomax-n" type="text" class="form-control" placeholder="" aria-describedby="" disabled>
@@ -346,7 +356,7 @@
                       <div class="col-lg-6 col-sm-6">
                         <div class="row">
                            <div class="col-lg-6 col-sm-6">
-                              <spam class="mejora9-2">Pasos Minimos:</spam>
+                              <label class="control-label">Pasos Minimos:</label>
                            </div>
                            <div class="col-lg-6 col-sm-6">
                               <input id="pasosmin-ID" name="pasosmin-n" type="text" class="form-control" placeholder="" aria-describedby="" disabled>
@@ -433,7 +443,7 @@
                      <div class="col-lg-4 col-sm-4">
                      </div>
                       <div class="col-lg-4 col-sm-4">
-                          <button type="button" class="btn btn-primary" onclick="abrirRecordatorio()" >Editar</button>
+                          <button type="button" class="btn btn-primary" onclick="abrirRecordatorio()" >Crear</button>
                      </div>
                   </div>
                        </div>

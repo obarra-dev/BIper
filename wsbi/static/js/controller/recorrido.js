@@ -84,7 +84,8 @@ $(document).ready(function(){
 								$("iframe").attr("src",source)
 							}
 							catch(err) {
-								alert("No se han encontrado resultados para la fecha.")
+								$("#notificacionID").text("No se han encontrado resultados para la fecha.")
+								$("#modal-notificacionID").modal();
 							}
 						},
 						error : function(jqXHR, exception) {

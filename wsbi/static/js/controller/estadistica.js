@@ -12,7 +12,7 @@ google.charts.setOnLoadCallback(function() {
 
 function mostrarFrecuencias() {
     $.ajax({
-        url: '/wsbi/get_pulsos_semanal',
+        url: '/wsbi/get_rango_pulsos/01012016/30122017',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -20,9 +20,135 @@ function mostrarFrecuencias() {
         dataType: "json",
         success: function(data) {
             var todosPulsos = data;
-            /**
- var todosPulsos = [
+/**
+  todosPulsos = [
 	{
+		"id": 1,
+		"fecha": "2017-09-09T15:42:04.829506Z",
+		"pulsosMax": 300,
+		"pulsosMin": 5000
+	},
+	{
+		"id": 2,
+		"fecha": "2017-09-11T23:40:01.223697Z",
+		"pulsosMax": 300,
+		"pulsosMin": 5000
+	},
+	{
+		"id": 3,
+		"fecha": "2017-09-11T23:44:39.503464Z",
+		"pulsosMax": 308,
+		"pulsosMin": 808
+	},
+	{
+		"id": 4,
+		"fecha": "2017-09-11T23:49:32.544629Z",
+		"pulsosMax": 308,
+		"pulsosMin": 606
+	},
+	{
+		"id": 5,
+		"fecha": "2017-09-13T00:59:28.623982Z",
+		"pulsosMax": 308,
+		"pulsosMin": 808
+	},
+	{
+		"id": 6,
+		"fecha": "2017-09-13T00:59:53.831248Z",
+		"pulsosMax": 308,
+		"pulsosMin": 808
+	},
+	{
+		"id": 7,
+		"fecha": "2017-10-08T14:26:15.455827Z",
+		"pulsosMax": 308,
+		"pulsosMin": 808
+	},
+		{
+		"id": 1,
+		"fecha": "2017-09-09T15:42:04.829506Z",
+		"pulsosMax": 300,
+		"pulsosMin": 5000
+	},
+	{
+		"id": 2,
+		"fecha": "2017-09-11T23:40:01.223697Z",
+		"pulsosMax": 300,
+		"pulsosMin": 5000
+	},
+	{
+		"id": 3,
+		"fecha": "2017-09-11T23:44:39.503464Z",
+		"pulsosMax": 308,
+		"pulsosMin": 808
+	},
+	{
+		"id": 4,
+		"fecha": "2017-09-11T23:49:32.544629Z",
+		"pulsosMax": 308,
+		"pulsosMin": 606
+	},
+	{
+		"id": 5,
+		"fecha": "2017-09-13T00:59:28.623982Z",
+		"pulsosMax": 308,
+		"pulsosMin": 808
+	},
+	{
+		"id": 6,
+		"fecha": "2017-09-13T00:59:53.831248Z",
+		"pulsosMax": 308,
+		"pulsosMin": 808
+	},
+	{
+		"id": 7,
+		"fecha": "2017-10-08T14:26:15.455827Z",
+		"pulsosMax": 308,
+		"pulsosMin": 808
+	},
+		{
+		"id": 1,
+		"fecha": "2017-09-09T15:42:04.829506Z",
+		"pulsosMax": 300,
+		"pulsosMin": 5000
+	},
+	{
+		"id": 2,
+		"fecha": "2017-09-11T23:40:01.223697Z",
+		"pulsosMax": 300,
+		"pulsosMin": 5000
+	},
+	{
+		"id": 3,
+		"fecha": "2017-09-11T23:44:39.503464Z",
+		"pulsosMax": 308,
+		"pulsosMin": 808
+	},
+	{
+		"id": 4,
+		"fecha": "2017-09-11T23:49:32.544629Z",
+		"pulsosMax": 308,
+		"pulsosMin": 606
+	},
+	{
+		"id": 5,
+		"fecha": "2017-09-13T00:59:28.623982Z",
+		"pulsosMax": 308,
+		"pulsosMin": 808
+	},
+	{
+		"id": 6,
+		"fecha": "2017-09-13T00:59:53.831248Z",
+		"pulsosMax": 308,
+		"pulsosMin": 808
+	},
+	{
+		"id": 7,
+		"fecha": "2017-10-08T14:26:15.455827Z",
+		"pulsosMax": 308,
+		"pulsosMin": 808
+	},
+		{
 		"id": 1,
 		"fecha": "2017-09-09T15:42:04.829506Z",
 		"pulsosMax": 300,
@@ -67,17 +193,15 @@ function mostrarFrecuencias() {
 ];
 **/
             var datos = [];
-            var titulos = ['Titulo', 'MAX', 'MIN'];
+            var titulos = ['', 'MIN', 'MAX'];
             datos.push(titulos);
             var ultimoNoRep = null;
             for (i = 0; i < todosPulsos.length; i++) {
                 var pulsoAray = [];
-                var diaf = days[parseToDate(todosPulsos[i].fecha).getDay()];
-                if (ultimoNoRep === diaf) {
-                    continue;
-                }
-                ultimoNoRep = diaf;
-                pulsoAray.push(diaf);
+                var dateD = parseToDate(todosPulsos[i].fecha);
+                var m = dateD.getMonth()+1;
+                var formate = dateD.getDate() +'-'+ m +'-'+dateD.getFullYear();
+                pulsoAray.push(formate);
                 pulsoAray.push(todosPulsos[i].pulsosMax);
                 pulsoAray.push(todosPulsos[i].pulsosMin);
                 datos.push(pulsoAray);
@@ -154,7 +278,7 @@ function mostrarFrecuencias() {
 
 function mostrarPasos() {
     $.ajax({
-        url: '/wsbi/get_pasos_semanal',
+        url: '/wsbi/get_rango_pasos/01012016/30122017',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -169,12 +293,10 @@ function mostrarPasos() {
             var ultimoNoRep = null;
             for (i = 0; i < todosPasos.length; i++) {
                 var pasoAray = [];
-                var diaf = days[parseToDate(todosPasos[i].fecha).getDay()];
-                if (ultimoNoRep === diaf) {
-                    continue;
-                }
-                ultimoNoRep = diaf;
-                pasoAray.push(diaf);
+                var dateD = parseToDate(todosPasos[i].fecha);
+                var m = dateD.getMonth()+1;
+                var formate = dateD.getDate() +'-'+ m +'-'+dateD.getFullYear();
+                pasoAray.push(formate);
                 pasoAray.push(todosPasos[i].pasosProm);
                 datos.push(pasoAray);
             }

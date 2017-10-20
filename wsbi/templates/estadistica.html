@@ -11,6 +11,8 @@
       <link href="/static/css/justified-nav.css" rel="stylesheet">
       <link href="/static/css/main-baston.css" rel="stylesheet" type="text/css">
       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+
    </head>
    <body>
       <div class="container">
@@ -30,14 +32,22 @@
          <div id="page-wrapper" class="jumbotron">
             <div class="page-content">
                <div id="tab-general">
+
+
+
                   <!--- FIN HEADER -->
                   <div class="row" id="dashboard">
                      <div class="col-md-1 col-md-offset-1">
                         <span class="pe-7s-angle-left-circle page-icon left"></span>
                      </div>
                      <div class="col-md-8">
-                        <h3 class="chart-title">Estadísticas - BI</h3>
-                        <div id="estadisticas" class="chart"></div>
+                        <!--
+                       <div class="checkbox">
+  <label>
+    <input type="checkbox" data-toggle="toggle"  data-on="Pulsos" data-off="Pasos">
+  </label>
+</div>
+-->
                      </div>
                      <div class="col-md-1">
                         <span class="pe-7s-angle-right-circle page-icon right"></span>
@@ -45,16 +55,22 @@
                      <div class="col-md-1">
                      </div>
                      <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-12">
                            <h3 class="chart-title">&nbsp;&nbsp;&nbsp;Pulsos cardiacos</h3>
                            <div id="tarjetas" class="chart"></div>
                         </div>
-                        <div class="col-lg-6">
+
+                     </div>
+                      <div class="row">
+
+                        <div class="col-lg-12">
                            <h3 class="chart-title">Pasos</h3>
                            <div id="cuentas" class="chart"></div>
                         </div>
                      </div>
                   </div>
+
+
                </div>
             </div>
          </div>
@@ -68,6 +84,7 @@
       <script src="/static/js/jquery-3.2.1.min.js"></script>
       <script src="/static/js/bootstrap.min.js"></script>
       <script src="/static/js/main.js"></script>
+      <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
       </div>
    </body>
 </html>

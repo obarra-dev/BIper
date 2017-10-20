@@ -26,6 +26,9 @@ urlpatterns = [
     url(r'^wsbi/get_recorrido_semanal$', views.get_recorrido_semanal),
     url(r'^wsbi/set_datosActividad', views.set_datosActividad),
     url(r'^wsbi/get_recorrido_por_fecha/(?P<fecha>.+)/$', views.get_recorrido_por_fecha),
+    url(r'^wsbi/get_rango_pasos/(?P<desde>.+)/(?P<hasta>.+)/$', views.get_rango_pasos),
+    url(r'^wsbi/get_rango_pulsos/(?P<desde>.+)/(?P<hasta>.+)/$', views.get_rango_pulsos),
+
 
 
 ]

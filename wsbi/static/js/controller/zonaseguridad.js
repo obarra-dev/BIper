@@ -58,14 +58,19 @@ function codeAddress() {
 
 function subirDatos() {
    //validaciones
-   // var distance = /^([1-9][0-9][0-9]|[1-9][0-9][0-9][0-9])$/;
+   $('#distance').next(".error").remove();
+   $('#address').next(".error").remove();
+    var distance = /^([1-9][0-9][0-9]|[1-9][0-9][0-9][0-9]|[1-9][0-9][0-9][0-9][0-9]|[1-9][0-9][0-9][0-9][0-9][0-9])$/; //100 a 999999
     if( $("#address").val() == "" ){
             $("#address").focus().after("<span class='error'>Ingrese dirección origen</span>");
             return false;
-        //}else if( $("#distance").val() == "" || !distance.test($("#distance").val()) ){
-        }else if( $("#distance").val() == "" || $("#distance").val() < 100 ){
+        }else if( $("#distance").val() == "" || !distance.test($("#distance").val() )){
             $("#distance").focus().after("<span class='error'>El rango minimo aceptado son 100 metros </span>");
             return false;
          }
+         //habilita los campos para poder insertarlos en la base
+    $('#latitude').removeAttr('disabled');
+    $('#longitude').removeAttr('disabled');
+
     document.formzonaseguridad.submit();
 }
