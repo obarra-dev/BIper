@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="833f8848-68e0-4dac-bcc3-2e2332dd3c6b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BI/settings.py" afterPath="$PROJECT_DIR$/BI/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsbi/static/css/main-baston.css" afterPath="$PROJECT_DIR$/wsbi/static/css/main-baston.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsbi/static/js/controller/estadistica.js" afterPath="$PROJECT_DIR$/wsbi/static/js/controller/estadistica.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsbi/static/js/controller/recorrido.js" afterPath="$PROJECT_DIR$/wsbi/static/js/controller/recorrido.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsbi/static/js/controller/zonaseguridad.js" afterPath="$PROJECT_DIR$/wsbi/static/js/controller/zonaseguridad.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsbi/templates/configuracion.html" afterPath="$PROJECT_DIR$/wsbi/templates/configuracion.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsbi/templates/estadistica.html" afterPath="$PROJECT_DIR$/wsbi/templates/estadistica.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsbi/templates/recorrido.html" afterPath="$PROJECT_DIR$/wsbi/templates/recorrido.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsbi/templates/zonaseguridad.html" afterPath="$PROJECT_DIR$/wsbi/templates/zonaseguridad.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsbi/urls.py" afterPath="$PROJECT_DIR$/wsbi/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsbi/views.py" afterPath="$PROJECT_DIR$/wsbi/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -81,8 +70,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BI/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="84" column="3" lean-forward="false" selection-start-line="84" selection-start-column="3" selection-end-line="84" selection-end-column="3" />
+            <state relative-caret-position="464">
+              <caret line="101" column="3" lean-forward="false" selection-start-line="101" selection-start-column="3" selection-end-line="101" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -1026,8 +1015,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BI/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="84" column="3" lean-forward="false" selection-start-line="84" selection-start-column="3" selection-end-line="84" selection-end-column="3" />
+        <state relative-caret-position="464">
+          <caret line="101" column="3" lean-forward="false" selection-start-line="101" selection-start-column="3" selection-end-line="101" selection-end-column="3" />
           <folding />
         </state>
       </provider>
