@@ -57,9 +57,28 @@ function parseToDate(fechaString, formato) {
 
 		// Now, create a couple of Date objects.
 		date = new Date(year, month, day);
+	}else if(formato === "yyyy-mm-ddT"){
+		var year= parseInt(fechaString.substring(0,4), 10);
+		var month = parseInt(fechaString.substring(5,7), 10) - 1; // JavaScript uses 0-11 for month
+		var day = parseInt(fechaString.substring(8,10), 10);
+
+		// Now, create a couple of Date objects.
+		date = new Date(year, month, day);
 	}else{
 		date = new Date(fechaString);
 	}
 
     return date;
+}
+
+function formatDate(date) {
+    var d = date,
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+
+    return [ day, month, year].join('');
 }

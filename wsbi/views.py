@@ -278,8 +278,9 @@ def get_rango_pasos(request, desde, hasta):
         desdeHasta = datetime.datetime.strptime(hasta, "%d%m%Y")
         desdeHasta = desdeHasta + datetime.timedelta(days=1)
         print(desdeHasta)
-
-        pasos_semanales = PasosHistorico.objects.filter(fecha__range=(desdeDate, desdeHasta))
+        idConfig = request.session['id_config']
+        con = Configuracion.objects.get(pk=idConfig)
+        pasos_semanales = PasosHistorico.objects.filter(fecha__range=(desdeDate, desdeHasta), usuarioBaston = con.usuarioBaston)
 
         serializer = PasosHistoricoSerializer(pasos_semanales, many=True)
         return JSONResponse(serializer.data)
@@ -297,7 +298,9 @@ def get_rango_pulsos(request, desde, hasta):
        # pasos_semanales = PulsosHistorico.objects.filter(fecha__range=["2011-01-01", "2011-01-31"])
         #start_date = datetime.date(2005, 1, 1)
         #end_date = datetime.date(2005, 3, 31)
-        pulsos_semanales = PulsosHistorico.objects.filter(fecha__range=(desdeDate, desdeHasta)).order_by('fecha')
+        idConfig = request.session['id_config']
+        con = Configuracion.objects.get(pk=idConfig)
+        pulsos_semanales = PulsosHistorico.objects.filter(fecha__range=(desdeDate, desdeHasta), usuarioBaston = con.usuarioBaston).order_by('fecha')
 
         serializer = PulsosHistoricoSerializer(pulsos_semanales, many=True)
         return JSONResponse(serializer.data)

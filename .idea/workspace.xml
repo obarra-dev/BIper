@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="833f8848-68e0-4dac-bcc3-2e2332dd3c6b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BI/settings.py" afterPath="$PROJECT_DIR$/BI/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsbi/static/js/controller/estadistica.js" afterPath="$PROJECT_DIR$/wsbi/static/js/controller/estadistica.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsbi/static/js/main.js" afterPath="$PROJECT_DIR$/wsbi/static/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsbi/templates/configuracion.html" afterPath="$PROJECT_DIR$/wsbi/templates/configuracion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsbi/templates/estadistica.html" afterPath="$PROJECT_DIR$/wsbi/templates/estadistica.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsbi/views.py" afterPath="$PROJECT_DIR$/wsbi/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +26,8 @@
       <file leaf-file-name="recorrido.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wsbi/static/js/controller/recorrido.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="50" column="59" lean-forward="false" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="59" />
+            <state relative-caret-position="231">
+              <caret line="50" column="66" lean-forward="false" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -30,8 +36,28 @@
       <file leaf-file-name="estadistica.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wsbi/static/js/controller/estadistica.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="195" column="28" lean-forward="false" selection-start-line="195" selection-start-column="28" selection-end-line="195" selection-end-column="28" />
+            <state relative-caret-position="-283">
+              <caret line="589" column="31" lean-forward="true" selection-start-line="589" selection-start-column="31" selection-end-line="589" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wsbi/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="583">
+              <caret line="301" column="51" lean-forward="false" selection-start-line="301" selection-start-column="43" selection-end-line="301" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wsbi/static/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="620">
+              <caret line="73" column="19" lean-forward="false" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -40,104 +66,43 @@
       <file leaf-file-name="estadistica.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wsbi/templates/estadistica.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="74" column="18" lean-forward="true" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BI/wsgi.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BI/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="101" column="3" lean-forward="false" selection-start-line="101" selection-start-column="3" selection-end-line="101" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wsbi/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="653">
-              <caret line="299" column="93" lean-forward="false" selection-start-line="299" selection-start-column="83" selection-end-line="299" selection-end-column="93" />
+            <state relative-caret-position="542">
+              <caret line="128" column="17" lean-forward="false" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
               <folding>
-                <element signature="e#0#36#0" expanded="true" />
+                <element signature="e#2423#2429#0" expanded="true" />
+                <element signature="e#2429#2435#0" expanded="true" />
+                <element signature="e#2435#2441#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="configuracion.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wsbi/templates/configuracion.html">
+      <file leaf-file-name="zonaseguridad.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wsbi/templates/zonaseguridad.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="475" column="0" lean-forward="false" selection-start-line="475" selection-start-column="0" selection-end-line="532" selection-end-column="13" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#2234#2241#1" expanded="true" />
-                <element signature="e#2312#2318#0" expanded="true" />
-                <element signature="e#2618#2624#0" expanded="true" />
-                <element signature="e#3013#3019#0" expanded="true" />
-                <element signature="e#3850#3856#0" expanded="true" />
-                <element signature="e#4635#4641#0" expanded="true" />
-                <element signature="e#5030#5036#0" expanded="true" />
-                <element signature="e#6510#6517#1" expanded="true" />
-                <element signature="e#10154#10160#0" expanded="true" />
-                <element signature="e#10160#10166#0" expanded="true" />
-                <element signature="e#10166#10172#0" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#13212#13218#0" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#14903#14909#0" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#16640#16646#0" expanded="true" />
-                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#17177#17183#0" expanded="true" />
-                <element signature="e#17183#17189#0" expanded="true" />
-                <element signature="n#style#0;n#em#0;n#strong#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#em#1;n#strong#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#17564#17570#0" expanded="true" />
-                <element signature="e#17570#17576#0" expanded="true" />
-                <element signature="n#style#0;n#em#0;n#strong#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#em#1;n#strong#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#17954#17960#0" expanded="true" />
-                <element signature="e#17960#17966#0" expanded="true" />
-                <element signature="n#style#0;n#em#0;n#strong#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#em#1;n#strong#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#18347#18353#0" expanded="true" />
-                <element signature="e#18353#18359#0" expanded="true" />
-                <element signature="n#style#0;n#em#0;n#strong#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#em#1;n#strong#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="981">
+              <caret line="84" column="15" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="84" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recorrido.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wsbi/templates/recorrido.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="40" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inicio.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wsbi/templates/inicio.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="588">
+              <caret line="28" column="49" lean-forward="false" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -152,12 +117,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="updateTest.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wsbi/updateTest.py">
+      <file leaf-file-name="configuracion.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wsbi/templates/configuracion.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="378">
+              <caret line="324" column="25" lean-forward="false" selection-start-line="324" selection-start-column="25" selection-end-line="324" selection-end-column="25" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#2234#2241#1" expanded="true" />
+                <element signature="e#2312#2318#0" expanded="true" />
+                <marker date="1508609140695" expanded="true" signature="19126:19141" ph="..." />
+                <marker date="1508609140695" expanded="true" signature="19126:19154" ph="..." />
+                <marker date="1508609140695" expanded="true" signature="19214:19361" ph="..." />
+                <marker date="1508609140695" expanded="true" signature="19993:21506" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -173,10 +146,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>white</find>
-      <find>acti</find>
-      <find>main</find>
-      <find>contr</find>
       <find>btn btn-white</find>
       <find>btn btn-whitebtn</find>
       <find>#f1e5e6</find>
@@ -203,6 +172,10 @@
       <find>configRec</find>
       <find>recorri</find>
       <find>seman</find>
+      <find>clic</find>
+      <find>desde</find>
+      <find>junio</find>
+      <find>label</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -229,7 +202,6 @@
         <option value="$PROJECT_DIR$/wsbi/models.py" />
         <option value="$PROJECT_DIR$/wsbi/static/js/controller/bandejas-inicio-supervisor.js" />
         <option value="$PROJECT_DIR$/wsbi/templates/inicio.html" />
-        <option value="$PROJECT_DIR$/wsbi/static/js/main.js" />
         <option value="$PROJECT_DIR$/wsbi/static/js/controller/configuracion.js" />
         <option value="$PROJECT_DIR$/wsbi/serializers.py" />
         <option value="$PROJECT_DIR$/wsbi/static/js/controller/zonaseguridad.js" />
@@ -244,16 +216,17 @@
         <option value="$PROJECT_DIR$/wsbi/templates/recorrido.html" />
         <option value="$PROJECT_DIR$/wsbi/templates/configuracion.html" />
         <option value="$PROJECT_DIR$/wsbi/urls.py" />
-        <option value="$PROJECT_DIR$/wsbi/views.py" />
+        <option value="$PROJECT_DIR$/BI/settings.py" />
+        <option value="$PROJECT_DIR$/wsbi/static/js/main.js" />
         <option value="$PROJECT_DIR$/wsbi/static/js/controller/estadistica.js" />
         <option value="$PROJECT_DIR$/wsbi/templates/estadistica.html" />
-        <option value="$PROJECT_DIR$/BI/settings.py" />
+        <option value="$PROJECT_DIR$/wsbi/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
-    <option name="width" value="1919" />
+    <option name="width" value="1918" />
     <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -278,34 +251,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="BI" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wsbi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="BI" />
@@ -543,10 +488,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="0" width="1919" height="1048" extended-state="0" />
-    <editor active="true" />
+    <frame x="-9" y="0" width="1918" height="1048" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17780116" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17789474" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32470334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -582,13 +526,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Program Files/Python36/Lib/site-packages/django/db/models/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="727" column="8" lean-forward="false" selection-start-line="727" selection-start-column="8" selection-end-line="727" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -735,13 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wsbi/templates/inicio.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="28" column="49" lean-forward="false" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wsbi/templates/prueba.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1014">
@@ -819,38 +749,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wsbi/static/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="27" lean-forward="true" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wsbi/static/js/controller/recorrido.jsBK">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wsbi/static/js/controller/configuracion.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="30" column="55" lean-forward="false" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wsbi/templates/recorrido.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2394">
-          <caret line="114" column="43" lean-forward="false" selection-start-line="114" selection-start-column="43" selection-end-line="114" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#1825#1832#1" expanded="true" />
-            <element signature="e#1884#1892#0" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -859,32 +761,6 @@
         <state relative-caret-position="693">
           <caret line="33" column="82" lean-forward="true" selection-start-line="33" selection-start-column="82" selection-end-line="33" selection-end-column="82" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wsbi/templates/zonaseguridad.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding>
-            <marker date="1508494069881" expanded="true" signature="3168:3256" ph="..." />
-            <marker date="1508494069881" expanded="true" signature="3168:3229" ph="..." />
-            <marker date="1508494069881" expanded="true" signature="3337:3689" ph="..." />
-            <marker date="1508494069881" expanded="true" signature="3502:3662" ph="..." />
-            <marker date="1508494069881" expanded="true" signature="3865:4364" ph="..." />
-            <marker date="1508494069881" expanded="true" signature="3927:4352" ph="..." />
-            <marker date="1508494069881" expanded="true" signature="3987:4338" ph="..." />
-            <marker date="1508494069881" expanded="true" signature="4014:4323" ph="..." />
-            <marker date="1508494069881" expanded="true" signature="4047:4308" ph="..." />
-            <marker date="1508494069881" expanded="false" signature="4080:4093" ph="..." />
-            <marker date="1508494069881" expanded="true" signature="4094:4111" ph="..." />
-            <marker date="1508494069881" expanded="true" signature="4272:4292" ph="..." />
-            <marker date="1508494069881" expanded="true" signature="4430:4836" ph="..." />
-            <marker date="1508494069881" expanded="true" signature="4468:4822" ph="..." />
-            <marker date="1508494069881" expanded="true" signature="4523:4807" ph="..." />
-            <marker date="1508494069881" expanded="true" signature="4560:4787" ph="..." />
-            <marker date="1508494069881" expanded="true" signature="4869:5021" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -900,99 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="106" column="8" lean-forward="false" selection-start-line="106" selection-start-column="8" selection-end-line="106" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wsbi/static/js/controller/recorrido.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="50" column="59" lean-forward="false" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wsbi/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wsbi/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="299" column="93" lean-forward="false" selection-start-line="299" selection-start-column="83" selection-end-line="299" selection-end-column="93" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wsbi/static/js/controller/estadistica.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="195" column="28" lean-forward="false" selection-start-line="195" selection-start-column="28" selection-end-line="195" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wsbi/templates/configuracion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="475" column="0" lean-forward="false" selection-start-line="475" selection-start-column="0" selection-end-line="532" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#2234#2241#1" expanded="true" />
-            <element signature="e#2312#2318#0" expanded="true" />
-            <element signature="e#2618#2624#0" expanded="true" />
-            <element signature="e#3013#3019#0" expanded="true" />
-            <element signature="e#3850#3856#0" expanded="true" />
-            <element signature="e#4635#4641#0" expanded="true" />
-            <element signature="e#5030#5036#0" expanded="true" />
-            <element signature="e#6510#6517#1" expanded="true" />
-            <element signature="e#10154#10160#0" expanded="true" />
-            <element signature="e#10160#10166#0" expanded="true" />
-            <element signature="e#10166#10172#0" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#13212#13218#0" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#14903#14909#0" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#16640#16646#0" expanded="true" />
-            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#17177#17183#0" expanded="true" />
-            <element signature="e#17183#17189#0" expanded="true" />
-            <element signature="n#style#0;n#em#0;n#strong#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#em#1;n#strong#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#17564#17570#0" expanded="true" />
-            <element signature="e#17570#17576#0" expanded="true" />
-            <element signature="n#style#0;n#em#0;n#strong#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#em#1;n#strong#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#17954#17960#0" expanded="true" />
-            <element signature="e#17960#17966#0" expanded="true" />
-            <element signature="n#style#0;n#em#0;n#strong#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#em#1;n#strong#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#18347#18353#0" expanded="true" />
-            <element signature="e#18353#18359#0" expanded="true" />
-            <element signature="n#style#0;n#em#0;n#strong#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#em#1;n#strong#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wsbi/templates/estadistica.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="74" column="18" lean-forward="true" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1015,8 +798,116 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BI/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="101" column="3" lean-forward="false" selection-start-line="101" selection-start-column="3" selection-end-line="101" selection-end-column="3" />
+        <state relative-caret-position="107">
+          <caret line="84" column="3" lean-forward="false" selection-start-line="84" selection-start-column="3" selection-end-line="84" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsbi/static/js/controller/configuracion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-864">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="94" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsbi/templates/inicio.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="28" column="49" lean-forward="false" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsbi/templates/recorrido.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="40" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsbi/templates/zonaseguridad.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="981">
+          <caret line="84" column="15" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="84" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsbi/templates/configuracion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="324" column="25" lean-forward="false" selection-start-line="324" selection-start-column="25" selection-end-line="324" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#2234#2241#1" expanded="true" />
+            <element signature="e#2312#2318#0" expanded="true" />
+            <marker date="1508609140695" expanded="true" signature="19126:19141" ph="..." />
+            <marker date="1508609140695" expanded="true" signature="19126:19154" ph="..." />
+            <marker date="1508609140695" expanded="true" signature="19214:19361" ph="..." />
+            <marker date="1508609140695" expanded="true" signature="19993:21506" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsbi/static/js/controller/recorrido.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="50" column="66" lean-forward="false" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsbi/static/js/moment.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsbi/static/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="73" column="19" lean-forward="false" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsbi/static/js/controller/estadistica.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-283">
+          <caret line="589" column="31" lean-forward="true" selection-start-line="589" selection-start-column="31" selection-end-line="589" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsbi/templates/estadistica.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="128" column="17" lean-forward="false" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
+          <folding>
+            <element signature="e#2423#2429#0" expanded="true" />
+            <element signature="e#2429#2435#0" expanded="true" />
+            <element signature="e#2435#2441#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsbi/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsbi/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="301" column="51" lean-forward="false" selection-start-line="301" selection-start-column="43" selection-end-line="301" selection-end-column="51" />
           <folding />
         </state>
       </provider>

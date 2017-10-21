@@ -62,13 +62,12 @@
             <div class="row actividad-body">
                <div class="col-lg-12 col-md-12 adicionales-content">
                   <div class="col-lg-12">
-                     <br>
-                     <h4 class="espproducto10">Datos de Pulsos&nbsp;:
-                     </h4>
+                      <br>
+                     <h4 class="espproducto10">Datos de Pulsos&nbsp;:</h4>
                   </div>
 
-                     <br> <br>
-
+                     <br>
+                     <br>
                      <br>
                      <div class="row">
                         <div class="col-lg-6 col-sm-6">
@@ -316,12 +315,13 @@
 
       <!-- Jumbotron -->
       <div class="jumbotron">
-
-                   <div class="row adicionales-body">
-                   <h4 class="espproducto10" style="margin-left: 44px;">DATOS DE PULSOS&nbsp;</h4>
-               <div class="col-lg-12 adicionales-content">
-                   <br><br>
-                  <div class="row">
+          <div class="row adicionales-body">
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                    <div align="right">FRECUENCIA CARDÍACA  <IMG src="/static/images/icons/heart_rate.png"></div>
+               </div>
+                <div class="panel-body">
+                    <div class="row">
                      <div class="col-lg-6 col-sm-6">
                         <div class="row">
                            <div class="col-lg-6 col-sm-6">
@@ -345,15 +345,15 @@
                         </div>
                      </div>
                   </div>
+                </div>
+            </div>
 
-
-
-                  <hr class="line-4">
-                  <br>
-                  <h4 class="espproducto10" style="margin-left: 44px;">DATOS DE PASOS&nbsp;</h4>
-                  <br> <br>
-                  <div class="row">
-                      <div class="col-lg-6 col-sm-6">
+              <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div align="right">CAMINATA  <IMG src="/static/images/icons/steps.png"></div>
+                  </div>
+                <div class="panel-body">
+                    <div class="col-lg-6 col-sm-6">
                         <div class="row">
                            <div class="col-lg-6 col-sm-6">
                               <label class="control-label">Pasos Minimos:</label>
@@ -364,19 +364,11 @@
                            <label id="pasosmin-error" for="pulsomin-n" class="error" style="margin-left: 48px;"></label>
                         </div>
                      </div>
-                     <div class="col-lg-6 col-sm-6">
-                        <div class="row">
-                           <div class="col-lg-6 col-sm-6">
-                           </div>
-                           <div class="col-lg-6 col-sm-6">
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <br><br>
+                </div>
+            </div>
+
+                  <br>
                   <div class="row">
-                      <div class="col-lg-4 col-sm-4">
-                     </div>
                      <div class="col-lg-4 col-sm-4">
                      </div>
                       <div class="col-lg-4 col-sm-4">
@@ -384,15 +376,15 @@
                      </div>
                   </div>
 
-
-                  <hr class="line-4">
                   <br>
-                  <h4 class="espproducto10" style="margin-left: 44px;">RECORDATORIOS&nbsp;</h4>
-
-                   <br><br>
-
-                   <div class="col-lg-12 adicionales-content">
-                <div class="row">
+                  <br>
+              <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div align="right">RECORDATORIOS  <IMG src="/static/images/icons/clock.png"></div>
+                    </div>
+               <div class="panel-body">
+                <div class="col-lg-12 adicionales-content">
+                 <div class="row">
                   <div class="col-lg-12 col-sm-12">
                     <table id="tablerecordatorios-ID">
                       <thead>
@@ -435,22 +427,19 @@
                     </table>
                   </div>
                 </div>
-                       <br>
-              <br>
-                       <div class="row">
-                      <div class="col-lg-4 col-sm-4">
-                     </div>
+               </div>
+              </div>
+             </div>
+                <br>
+                  <div class="row">
                      <div class="col-lg-4 col-sm-4">
                      </div>
                       <div class="col-lg-4 col-sm-4">
-                          <button type="button" class="btn btn-primary" onclick="abrirRecordatorio()" >Crear</button>
+                           <button type="button" class="btn btn-primary" onclick="abrirRecordatorio()" >Crear</button>
                      </div>
                   </div>
-                       </div>
 
-
-               </div>
-            </div>
+          </div>
       </div>
 
 
