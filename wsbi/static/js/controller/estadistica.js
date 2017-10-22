@@ -213,21 +213,56 @@ if(desde == null || hasta == null){
             var titulos = ['', 'MIN', 'MAX'];
             datos.push(titulos);
             var ultimoNoRep = null;
+	        var cant = 1;
+            var contDiaNum = 0;
+            var cantTotal = 0;
             for (i = 0; i < todosPulsos.length; i++) {
                 var pulsoAray = [];
                 var dateD = parseToDate(todosPulsos[i].fecha, 'yyyy-mm-ddT');
-                var diaf = days[dateD.getDay()];
+                var diaNum = dateD.getDay();
+                var diaf = days[diaNum];
                 var m = dateD.getMonth()+1;
                 var formate = dateD.getDate() +'-'+ m +'-'+dateD.getFullYear();
                 if (ultimoNoRep === formate) {
                     continue;
                 }
                 ultimoNoRep = formate;
+                contDiaNum = diaNum;
+                //setea valores por defecto entre fechas
+                for (k = cant; k < dateD.getDate(); k++) {
+                    var cerros = [];
+                    if(contDiaNum>6){
+                        contDiaNum  = contDiaNum % 7;
+                    }
+                    cerros.push(days[contDiaNum]);
+                    cerros.push(0);
+                    cerros.push(0);
+                    datos.push(cerros);
+                    contDiaNum ++;
+                    cantTotal++;
+                }
                 pulsoAray.push(diaf);
                 pulsoAray.push(todosPulsos[i].pulsosMax);
                 pulsoAray.push(todosPulsos[i].pulsosMin);
+                cant++;
+                cantTotal++;
                 datos.push(pulsoAray);
             }
+	    //setea valores por defecto desde el ultimo dia registrado hasta el fin de mes
+            var hoyDate = new Date();
+            var ultiDate = new Date(hoyDate.getFullYear(), hoyDate.getMonth() + 1, 0);
+            for (j = cantTotal; j < ultiDate.getDate(); j++) {
+                    var cerros = [];
+                    var diaNum = j;
+                    if(diaNum>6){
+                        diaNum  = j % 7;
+                    }
+                    cerros.push(days[diaNum]);
+                    cerros.push(0);
+                    cerros.push(0);
+                    datos.push(cerros);
+            }
+
             var data = new google.visualization.arrayToDataTable(datos);
 
             var view = new google.visualization.DataView(data);
@@ -474,22 +509,54 @@ if(desde == null || hasta == null){
             var titulos = ['Titulo', 'CANTIDAD'];
             datos.push(titulos);
             var ultimoNoRep = null;
+            var cant = 1;
+            var contDiaNum = 0;
+            var cantTotal = 0;
             for (i = 0; i < todosPasos.length; i++) {
                 var pasoAray = [];
                 var dateD = parseToDate(todosPasos[i].fecha, 'yyyy-mm-ddT');
-                var diaf = days[dateD.getDay()];
+                var diaNum = dateD.getDay();
+                var diaf = days[diaNum];
                 var m = dateD.getMonth()+1;
                 var formate = dateD.getDate() +'-'+ m +'-'+dateD.getFullYear();
                 if (ultimoNoRep === formate) {
                     continue;
                 }
                 ultimoNoRep = formate;
-
+                contDiaNum = diaNum;
+                //setea valores por defecto entre fechas
+                for (k = cant; k < dateD.getDate(); k++) {
+                    var cerros = [];
+                    if(contDiaNum>6){
+                        contDiaNum  = contDiaNum % 7;
+                    }
+                    cerros.push(days[contDiaNum]);
+                    cerros.push(0);
+                    datos.push(cerros);
+                    contDiaNum ++;
+                    cantTotal++;
+                }
 
                 pasoAray.push(diaf);
                 pasoAray.push(todosPasos[i].pasosProm);
                 datos.push(pasoAray);
+                cant++;
+                cantTotal++;
             }
+            //setea valores por defecto desde el ultimo dia registrado hasta el fin de mes
+            var hoyDate = new Date();
+            var ultiDate = new Date(hoyDate.getFullYear(), hoyDate.getMonth() + 1, 0);
+            for (j = cantTotal; j < ultiDate.getDate(); j++) {
+                    var cerros = [];
+                    var diaNum = j;
+                    if(diaNum>6){
+                        diaNum  = j % 7;
+                    }
+                    cerros.push(days[diaNum]);
+                    cerros.push(0);
+                    datos.push(cerros);
+            }
+
             var data = new google.visualization.arrayToDataTable(datos);
 
             var view = new google.visualization.DataView(data);

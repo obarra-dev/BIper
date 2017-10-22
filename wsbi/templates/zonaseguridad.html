@@ -31,7 +31,16 @@
       <!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->
       <div class="masthead">
-          <div align="left"><IMG src="/static/images/logo/logo_baston_top.png"></div>
+        <div>
+        <div class="w3-left">
+                  <IMG src="/static/images/logo/logo_baston_top.png">
+         </div>
+          <div class="w3-right">
+                  <label class="control-label padd-b"> {{ request.session.nombre }}, {{ request.session.apellido }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                  <a href="/wsbi/inicio">Salir</a>
+         </div>
+        </div>
+       <br><br><br><br><br>
         <nav>
           <ul class="nav nav-justified">
             <li><a href="configuracion">Configuración</a></li>

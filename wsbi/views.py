@@ -47,6 +47,8 @@ def loginUser(request):
                 con = Configuracion.objects.get(usuarioBaston=user)
                 print(con.id)
                 request.session['id_config'] = con.id
+                request.session['nombre'] = user.nombre
+                request.session['apellido'] = user.apellido
                 return render(request, 'configuracion.html')
     return render(request, 'inicio.html')
 

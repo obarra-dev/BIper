@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'BI.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -93,13 +93,13 @@ DATABASES = {
 }
 
 """
-
 DATABASES = {
     'default': dj_database_url.config(
         default='postgres://kuiwtzdtjueykb:e6074ccc7510c4522a36bab0e0c8ae2b28842cb2f1b853eff7f5d9e889e44e70@ec2-23-23-244-83.compute-1.amazonaws.com:5432/d1aiq5t0i144ls'
 	)
 }
 
+"""
 
 
 # Password validation
@@ -132,7 +132,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

@@ -164,6 +164,6 @@ function uploadRecordatorio() {
             $("#recordatorio-ID").modal('hide');
 		}
 
-
 }
+
 

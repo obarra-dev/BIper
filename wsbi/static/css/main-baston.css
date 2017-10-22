@@ -524,3 +524,15 @@ th a{
     padding-left: 0px;
     margin-top: 0px;
 }
+
+th {
+    text-align: center;
+}
+
+.w3-right {
+    float: right!important;
+}
+
+.w3-left {
+    float: left!important;
+}

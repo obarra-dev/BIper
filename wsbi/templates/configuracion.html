@@ -9,6 +9,8 @@
     padding-bottom: 0px;
     padding-left: 20px;
 }
+
+
 </style>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -34,7 +36,7 @@
     <link href="/static/css/main-baston.css" rel="stylesheet" type="text/css">
 
 	<link type="text/css" rel="stylesheet" href="/static/jquery-ui/jquery-ui.css" />
-	<link type="text/css" rel="stylesheet" href="/static/jquery-ui/jquery-ui.theme.css" />
+
     <!--<link type="text/css" rel="stylesheet" href="/static/css/font-awesome.min.css" />-->
 
 
@@ -296,19 +298,32 @@
 
   <body>
 
+
+
     <div class="container">
+
+
 
       <!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->
       <div class="masthead">
-         <div align="left"><IMG src="/static/images/logo/logo_baston_top.png"></div>
+        <div>
+        <div class="w3-left">
+                  <IMG src="/static/images/logo/logo_baston_top.png">
+         </div>
+          <div class="w3-right">
+                  <label class="control-label padd-b"> {{ request.session.nombre }}, {{ request.session.apellido }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                  <a href="/wsbi/inicio">Salir</a>
+         </div>
+        </div>
+       <br><br><br><br><br>
+
         <nav>
           <ul class="nav nav-justified">
             <li class="active"><a href="configuracion">Configuración</a></li>
             <li><a href="recorrido">Recorrido</a></li>
             <li><a href="estadistica">Estadísticas</a></li>
             <li><a href="zonaseguridad">Zona de Seguridad</a></li>
-
           </ul>
         </nav>
       </div>
@@ -469,24 +484,30 @@
 		 $("#datoActividadForm-ID").validate({
               rules:{
                 pulsoMinname : {
-                  required : true
+                  required : true,
+                  number: true
                 },
                 pulsoMaxname : {
-                  required : true
+                  required : true,
+                  number: true
                 },
                 pasosMinname : {
-                  required : true
+                  required : true,
+                  number: true
                 }
               },
               messages:{
                 pulsoMinname : {
-                  required : "Debe completar el campo"
+                  required : "Debe completar el campo",
+                  number: "Debe ser numerico"
                 },
                 pulsoMaxname : {
-                  required : "Debe completar el campo"
+                  required : "Debe completar el campo",
+                  number: "Debe ser numerico"
                 },
                 pasosMinname : {
-                  required :"Debe completar el campo"
+                  required :"Debe completar el campo",
+                  number: "Debe ser numerico"
                 }
               }
             });
