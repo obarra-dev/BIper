@@ -209,6 +209,17 @@ if(desde == null || hasta == null){
 	}
 ];
 **/
+var todosPulsoNoRep = [];
+for (i = 0; i < todosPulsos.length; i++) {
+                var dateD = parseToDate(todosPulsos[i].fecha, 'yyyy-mm-ddT');
+                var m = dateD.getMonth()+1;
+                var formate = dateD.getDate() +'-'+ m +'-'+dateD.getFullYear();
+                if (todosPulsoNoRep.indexOf(formate) != -1) {
+                    continue;
+                }
+todosPulsoNoRep.push(formate);
+
+}
             var datos = [];
             var titulos = ['', 'MIN', 'MAX'];
             datos.push(titulos);
@@ -216,7 +227,7 @@ if(desde == null || hasta == null){
 	        var cant = 1;
             var contDiaNum = 0;
             var cantTotal = 0;
-            for (i = 0; i < todosPulsos.length; i++) {
+            for (i = 0; i < todosPulsoNoRep.length; i++) {
                 var pulsoAray = [];
                 var dateD = parseToDate(todosPulsos[i].fecha, 'yyyy-mm-ddT');
                 var diaNum = dateD.getDay();
@@ -350,6 +361,7 @@ if(desde == null || hasta == null){
         dataType: "json",
         success: function(data) {
             var todosPasos = data;
+
       /**
        todosPasos = [
 	{
@@ -505,6 +517,17 @@ if(desde == null || hasta == null){
 	}
 ];
 **/
+var todosPasosNoRep = [];
+for (i = 0; i < todosPasos.length; i++) {
+                var dateD = parseToDate(todosPasos[i].fecha, 'yyyy-mm-ddT');
+                var m = dateD.getMonth()+1;
+                var formate = dateD.getDate() +'-'+ m +'-'+dateD.getFullYear();
+                if (todosPasosNoRep.indexOf(formate) != -1) {
+                    continue;
+                }
+todosPasosNoRep.push(formate);
+
+}
             var datos = [];
             var titulos = ['Titulo', 'CANTIDAD'];
             datos.push(titulos);
@@ -512,9 +535,9 @@ if(desde == null || hasta == null){
             var cant = 1;
             var contDiaNum = 0;
             var cantTotal = 0;
-            for (i = 0; i < todosPasos.length; i++) {
+            for (i = 0; i < todosPasosNoRep.length; i++) {
                 var pasoAray = [];
-                var dateD = parseToDate(todosPasos[i].fecha, 'yyyy-mm-ddT');
+                var dateD = parseToDate(todosPasos[i].fecha, 'yyyy-mm-dd');
                 var diaNum = dateD.getDay();
                 var diaf = days[diaNum];
                 var m = dateD.getMonth()+1;

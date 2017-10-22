@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="833f8848-68e0-4dac-bcc3-2e2332dd3c6b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BI/settings.py" afterPath="$PROJECT_DIR$/BI/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsbi/static/js/controller/estadistica.js" afterPath="$PROJECT_DIR$/wsbi/static/js/controller/estadistica.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,18 +32,18 @@
       <file leaf-file-name="configuracion.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wsbi/static/js/controller/configuracion.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
-              <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+            <state relative-caret-position="809">
+              <caret line="154" column="0" lean-forward="true" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="estadistica.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="estadistica.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wsbi/static/js/controller/estadistica.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="254" column="36" lean-forward="true" selection-start-line="254" selection-start-column="36" selection-end-line="254" selection-end-column="36" />
+            <state relative-caret-position="593">
+              <caret line="363" column="0" lean-forward="true" selection-start-line="363" selection-start-column="0" selection-end-line="363" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -75,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BI/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="84" column="3" lean-forward="false" selection-start-line="84" selection-start-column="3" selection-end-line="84" selection-end-column="3" />
+            <state relative-caret-position="462">
+              <caret line="100" column="3" lean-forward="false" selection-start-line="100" selection-start-column="3" selection-end-line="100" selection-end-column="3" />
               <folding>
                 <element signature="e#306#315#0" expanded="true" />
               </folding>
@@ -90,8 +92,8 @@
       <file leaf-file-name="estadistica.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wsbi/templates/estadistica.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="54" selection-end-column="27" />
+            <state relative-caret-position="332">
+              <caret line="50" column="56" lean-forward="true" selection-start-line="50" selection-start-column="56" selection-end-line="50" selection-end-column="56" />
               <folding>
                 <element signature="e#2076#2082#0" expanded="true" />
                 <element signature="e#2082#2088#0" expanded="true" />
@@ -268,14 +270,14 @@
         <option value="$PROJECT_DIR$/wsbi/urls.py" />
         <option value="$PROJECT_DIR$/wsbi/static/js/main.js" />
         <option value="$PROJECT_DIR$/wsbi/views.py" />
-        <option value="$PROJECT_DIR$/wsbi/static/js/controller/configuracion.js" />
-        <option value="$PROJECT_DIR$/wsbi/static/js/controller/estadistica.js" />
         <option value="$PROJECT_DIR$/wsbi/templates/configuracion.html" />
         <option value="$PROJECT_DIR$/wsbi/static/css/main-baston.css" />
         <option value="$PROJECT_DIR$/wsbi/templates/estadistica.html" />
         <option value="$PROJECT_DIR$/wsbi/templates/recorrido.html" />
         <option value="$PROJECT_DIR$/wsbi/templates/zonaseguridad.html" />
         <option value="$PROJECT_DIR$/BI/settings.py" />
+        <option value="$PROJECT_DIR$/wsbi/static/js/controller/configuracion.js" />
+        <option value="$PROJECT_DIR$/wsbi/static/js/controller/estadistica.js" />
       </list>
     </option>
   </component>
@@ -1013,22 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wsbi/static/js/controller/configuracion.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wsbi/static/js/controller/estadistica.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="254" column="36" lean-forward="true" selection-start-line="254" selection-start-column="36" selection-end-line="254" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wsbi/static/js/controller/recorrido.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="987">
@@ -1042,6 +1028,75 @@
         <state relative-caret-position="830">
           <caret line="537" column="1" lean-forward="false" selection-start-line="537" selection-start-column="1" selection-end-line="537" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BI/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="100" column="3" lean-forward="false" selection-start-line="100" selection-start-column="3" selection-end-line="100" selection-end-column="3" />
+          <folding>
+            <element signature="e#306#315#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsbi/templates/zonaseguridad.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+          <folding>
+            <element signature="e#1432#1438#0" expanded="true" />
+            <element signature="e#1438#1444#0" expanded="true" />
+            <element signature="e#1444#1450#0" expanded="true" />
+            <element signature="e#1450#1456#0" expanded="true" />
+            <element signature="e#1456#1462#0" expanded="true" />
+            <element signature="e#1462#1468#0" expanded="true" />
+            <element signature="e#1468#1474#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsbi/static/js/controller/zonaseguridad.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="33" column="82" lean-forward="true" selection-start-line="33" selection-start-column="82" selection-end-line="33" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsbi/templates/estadistica.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="50" column="56" lean-forward="true" selection-start-line="50" selection-start-column="56" selection-end-line="50" selection-end-column="56" />
+          <folding>
+            <element signature="e#2076#2082#0" expanded="true" />
+            <element signature="e#2082#2088#0" expanded="true" />
+            <element signature="e#2088#2094#0" expanded="true" />
+            <element signature="e#2094#2100#0" expanded="true" />
+            <element signature="e#2100#2106#0" expanded="true" />
+            <element signature="e#2106#2112#0" expanded="true" />
+            <element signature="e#2112#2118#0" expanded="true" />
+            <element signature="e#2770#2776#0" expanded="true" />
+            <element signature="e#2776#2782#0" expanded="true" />
+            <element signature="e#2782#2788#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsbi/templates/recorrido.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="86" column="27" lean-forward="false" selection-start-line="86" selection-start-column="27" selection-end-line="86" selection-end-column="27" />
+          <folding>
+            <element signature="e#2859#2865#0" expanded="true" />
+            <element signature="e#2865#2871#0" expanded="true" />
+            <element signature="e#2871#2877#0" expanded="true" />
+            <element signature="e#2877#2883#0" expanded="true" />
+            <element signature="e#2883#2889#0" expanded="true" />
+            <element signature="e#2889#2895#0" expanded="true" />
+            <element signature="e#2895#2901#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1097,72 +1152,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wsbi/templates/estadistica.html">
+    <entry file="file://$PROJECT_DIR$/wsbi/static/js/controller/configuracion.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="54" selection-end-column="27" />
-          <folding>
-            <element signature="e#2076#2082#0" expanded="true" />
-            <element signature="e#2082#2088#0" expanded="true" />
-            <element signature="e#2088#2094#0" expanded="true" />
-            <element signature="e#2094#2100#0" expanded="true" />
-            <element signature="e#2100#2106#0" expanded="true" />
-            <element signature="e#2106#2112#0" expanded="true" />
-            <element signature="e#2112#2118#0" expanded="true" />
-            <element signature="e#2770#2776#0" expanded="true" />
-            <element signature="e#2776#2782#0" expanded="true" />
-            <element signature="e#2782#2788#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wsbi/templates/recorrido.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="86" column="27" lean-forward="false" selection-start-line="86" selection-start-column="27" selection-end-line="86" selection-end-column="27" />
-          <folding>
-            <element signature="e#2859#2865#0" expanded="true" />
-            <element signature="e#2865#2871#0" expanded="true" />
-            <element signature="e#2871#2877#0" expanded="true" />
-            <element signature="e#2877#2883#0" expanded="true" />
-            <element signature="e#2883#2889#0" expanded="true" />
-            <element signature="e#2889#2895#0" expanded="true" />
-            <element signature="e#2895#2901#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wsbi/static/js/controller/zonaseguridad.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="33" column="82" lean-forward="true" selection-start-line="33" selection-start-column="82" selection-end-line="33" selection-end-column="82" />
+        <state relative-caret-position="809">
+          <caret line="154" column="0" lean-forward="true" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wsbi/templates/zonaseguridad.html">
+    <entry file="file://$PROJECT_DIR$/wsbi/static/js/controller/estadistica.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-          <folding>
-            <element signature="e#1432#1438#0" expanded="true" />
-            <element signature="e#1438#1444#0" expanded="true" />
-            <element signature="e#1444#1450#0" expanded="true" />
-            <element signature="e#1450#1456#0" expanded="true" />
-            <element signature="e#1456#1462#0" expanded="true" />
-            <element signature="e#1462#1468#0" expanded="true" />
-            <element signature="e#1468#1474#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BI/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="84" column="3" lean-forward="false" selection-start-line="84" selection-start-column="3" selection-end-line="84" selection-end-column="3" />
-          <folding>
-            <element signature="e#306#315#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="593">
+          <caret line="363" column="0" lean-forward="true" selection-start-line="363" selection-start-column="0" selection-end-line="363" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
