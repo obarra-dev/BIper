@@ -65,7 +65,7 @@ c = json.dumps(
 
 
 
-response = requests.get('https://bidesa.herokuapp.com/wsbi/config/1')
+response = requests.get('https://bidesa.herokuapp.com/wsbi/config/2')
 print(response.content)
 config = ParserObject(response.content)
 
@@ -79,20 +79,38 @@ alejamiento = ParserObject(json.dumps(config.alejamiento))
 
 print(alejamiento.distanciaMax)
 
-alarmaPersonalizadaAlejamiento = ParserObject(json.dumps(alejamiento.alarmaPersonalizada))
-print(alarmaPersonalizadaAlejamiento.texto)
-print(alarmaPersonalizadaAlejamiento.pathAudio)
 
 
 for reco in config.recordatorios:
     rec = ParserObject(json.dumps(reco))
-    ala = ParserObject(json.dumps(rec.alarmaPersonalizada))
+    alarma = ParserObject(json.dumps(rec.alarmaPersonalizada))
+    print(alarma.id)
+    print(alarma.texto)
+    print(alarma.pathAudio)
+
+
+    path = alarma.pathAudio.split('/')
+    ultimo = len(path)-1
+    pathDestinoRecordatorio = '/home/pi/Proyectos/temporales/recordatorios/' + str(alarma.id) + path[ultimo]
+    #pathDestinoRecordatorio = '' + str(alarma.id) + path[ultimo]
+    print(pathDestinoRecordatorio)
+    s3 = boto3.resource('s3', aws_access_key_id=credencialAmazon.keyId,
+						aws_secret_access_key=credencialAmazon.secretKey)
+    # descargar un audio
+    myBucket = s3.Bucket('biaudios')
+    nombreAud = myBucket.Object(alarma.pathAudio)  # nombre del archivo del recordatorio.
+    data = nombreAud.get()['Body'].read()
+    with open(pathDestinoRecordatorio, 'wb') as f2:
+        f2.write(data)
 
 
 
-print(ala.id)
-print(ala.texto)
-print(ala.pathAudio)
+
+
+
+
+
+
 
 
 
