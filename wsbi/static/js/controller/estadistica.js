@@ -598,7 +598,7 @@ todosPasosNoRep.push(todosPasos[i]);
                 },
                 height: 300,
                 width: '100%',
-                isStacked: 'true',
+
                 series: {
                     0: {
                         color: '#303880'
@@ -608,8 +608,7 @@ todosPasosNoRep.push(todosPasos[i]);
                     },
                 },
                 chartArea: {
-                    left: 0,
-                    right: 40,
+                    left: 40,
                     width: '100%',
                     height: '80%'
                 },
@@ -629,9 +628,10 @@ todosPasosNoRep.push(todosPasos[i]);
                 }
             };
 
-            var chart = new google.visualization.ColumnChart(document.getElementById('pasoschartID'));
-            chart.draw(view, options);
 
+	        var chart = new google.charts.Bar(document.getElementById('pasoschartID'));
+
+            chart.draw(view, google.charts.Bar.convertOptions(options));
 
         },
         error: function(jqXHR, exception) {

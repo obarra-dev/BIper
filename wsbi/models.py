@@ -63,11 +63,13 @@ class Recordatorio(models.Model):
 
 class PasosHistorico(models.Model):
     usuarioBaston = models.ForeignKey(UsuarioBaston)
+    #fecha = models.DateTimeField(auto_now=False)
     fecha = models.DateTimeField(auto_now_add=True)
     pasosProm = models.IntegerField(default=0)
 
 class PulsosHistorico(models.Model):
     usuarioBaston = models.ForeignKey(UsuarioBaston)
+    #fecha = models.DateTimeField(auto_now=False)
     fecha = models.DateTimeField(auto_now_add=True)
     pulsosProm = models.IntegerField(default=0)
     pulsosMax = models.IntegerField(default=0)
@@ -75,5 +77,6 @@ class PulsosHistorico(models.Model):
 
 class TrayectoriaHistorico(models.Model):
     usuarioBaston = models.ForeignKey(UsuarioBaston)
+    #fecha = models.DateTimeField(auto_now=False)
     fecha = models.DateTimeField(auto_now_add=True)
     camino = models.CharField(max_length=1000)

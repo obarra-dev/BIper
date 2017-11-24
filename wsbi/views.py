@@ -282,7 +282,7 @@ def get_rango_pasos(request, desde, hasta):
         print(desdeHasta)
         idConfig = request.session['id_config']
         con = Configuracion.objects.get(pk=idConfig)
-        pasos_semanales = PasosHistorico.objects.filter(fecha__range=(desdeDate, desdeHasta), usuarioBaston = con.usuarioBaston)
+        pasos_semanales = PasosHistorico.objects.filter(fecha__range=(desdeDate, desdeHasta), usuarioBaston = con.usuarioBaston).order_by('fecha')
 
         serializer = PasosHistoricoSerializer(pasos_semanales, many=True)
         return JSONResponse(serializer.data)
