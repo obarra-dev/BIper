@@ -9,12 +9,15 @@ google.charts.load('current', {
 
 
 function mostrarFrecuencias(desde, hasta) {
+var dateConsulta = new Date();
 if(desde == null || hasta == null){
     var date = new Date();
     desde = new Date(date.getFullYear(), date.getMonth(), 1);
     desde = formatDate(desde);
     hasta = new Date(date.getFullYear(), date.getMonth() + 1, 0);
     hasta = formatDate(hasta);
+}else{
+dateConsulta =  parseToDate(desde,"ddmmyyyy");
 }
     $.ajax({
         url: '/wsbi/get_rango_pulsos/'+ desde+'/'+hasta,
@@ -26,190 +29,6 @@ if(desde == null || hasta == null){
         success: function(data) {
             var todosPulsos = data;
 
-/**
-  todosPulsos = [
-	{
-		"id": 1,
-		"fecha": "2017-09-01T15:42:04.829506Z",
-		"pulsosMax": 300,
-		"pulsosMin": 5000
-	},
-	{
-		"id": 2,
-		"fecha": "2017-09-02T23:40:01.223697Z",
-		"pulsosMax": 300,
-		"pulsosMin": 5000
-	},
-	{
-		"id": 3,
-		"fecha": "2017-09-03T23:44:39.503464Z",
-		"pulsosMax": 308,
-		"pulsosMin": 808
-	},
-	{
-		"id": 4,
-		"fecha": "2017-09-04T23:49:32.544629Z",
-		"pulsosMax": 308,
-		"pulsosMin": 606
-	},
-	{
-		"id": 5,
-		"fecha": "2017-09-05T23:49:32.544629Z",
-		"pulsosMax": 308,
-		"pulsosMin": 808
-	},
-	{
-		"id": 6,
-		"fecha": "2017-09-06T23:49:32.544629Z",
-		"pulsosMax": 308,
-		"pulsosMin": 808
-	},
-	{
-		"id": 7,
-		"fecha": "2017-09-07T14:26:15.455827Z",
-		"pulsosMax": 308,
-		"pulsosMin": 808
-	},
-		{
-		"id": 1,
-		"fecha": "2017-09-08T15:42:04.829506Z",
-		"pulsosMax": 300,
-		"pulsosMin": 5000
-	},
-	{
-		"id": 2,
-		"fecha": "2017-09-09T23:40:01.223697Z",
-		"pulsosMax": 300,
-		"pulsosMin": 5000
-	},
-	{
-		"id": 3,
-		"fecha": "2017-09-10T23:44:39.503464Z",
-		"pulsosMax": 308,
-		"pulsosMin": 808
-	},
-	{
-		"id": 4,
-		"fecha": "2017-09-11T23:49:32.544629Z",
-		"pulsosMax": 308,
-		"pulsosMin": 606
-	},
-	{
-		"id": 5,
-		"fecha": "2017-09-12T23:49:32.544629Z",
-		"pulsosMax": 308,
-		"pulsosMin": 808
-	},
-	{
-		"id": 6,
-		"fecha": "2017-09-13T23:49:32.544629Z",
-		"pulsosMax": 308,
-		"pulsosMin": 808
-	},
-	{
-		"id": 7,
-		"fecha": "2017-09-14T14:26:15.455827Z",
-		"pulsosMax": 308,
-		"pulsosMin": 808
-	},
-		{
-		"id": 1,
-		"fecha": "2017-09-15T15:42:04.829506Z",
-		"pulsosMax": 300,
-		"pulsosMin": 5000
-	},
-	{
-		"id": 2,
-		"fecha": "2017-09-16T23:40:01.223697Z",
-		"pulsosMax": 300,
-		"pulsosMin": 5000
-	},
-	{
-		"id": 3,
-		"fecha": "2017-09-17T23:44:39.503464Z",
-		"pulsosMax": 308,
-		"pulsosMin": 808
-	},
-	{
-		"id": 4,
-		"fecha": "2017-09-18T23:49:32.544629Z",
-		"pulsosMax": 308,
-		"pulsosMin": 606
-	},
-	{
-		"id": 5,
-		"fecha": "2017-09-19T00:59:28.623982Z",
-		"pulsosMax": 308,
-		"pulsosMin": 808
-	},
-	{
-		"id": 6,
-		"fecha": "2017-09-20T00:59:53.831248Z",
-		"pulsosMax": 308,
-		"pulsosMin": 808
-	},
-	{
-		"id": 7,
-		"fecha": "2017-09-21T14:26:15.455827Z",
-		"pulsosMax": 308,
-		"pulsosMin": 808
-	},
-		{
-		"id": 1,
-		"fecha": "2017-09-22T15:42:04.829506Z",
-		"pulsosMax": 300,
-		"pulsosMin": 5000
-	},
-	{
-		"id": 2,
-		"fecha": "2017-09-23T23:40:01.223697Z",
-		"pulsosMax": 300,
-		"pulsosMin": 5000
-	},
-	{
-		"id": 3,
-		"fecha": "2017-09-24T23:44:39.503464Z",
-		"pulsosMax": 308,
-		"pulsosMin": 808
-	},
-	{
-		"id": 4,
-		"fecha": "2017-09-25T23:49:32.544629Z",
-		"pulsosMax": 308,
-		"pulsosMin": 606
-	},
-	{
-		"id": 5,
-		"fecha": "2017-09-26T00:59:28.623982Z",
-		"pulsosMax": 308,
-		"pulsosMin": 808
-	},
-	{
-		"id": 6,
-		"fecha": "2017-09-27T00:59:53.831248Z",
-		"pulsosMax": 308,
-		"pulsosMin": 808
-	},
-	{
-		"id": 7,
-		"fecha": "2017-09-28T14:26:15.455827Z",
-		"pulsosMax": 308,
-		"pulsosMin": 808
-	},
-	{
-		"id": 5,
-		"fecha": "2017-09-29T00:59:28.623982Z",
-		"pulsosMax": 308,
-		"pulsosMin": 808
-	},
-	{
-		"id": 6,
-		"fecha": "2017-09-30T00:59:53.831248Z",
-		"pulsosMax": 308,
-		"pulsosMin": 808
-	}
-];
-**/
 var todosPulsoNoRep = [];
 var ultimoNoRep = null;
 for (i = 0; i < todosPulsos.length; i++) {
@@ -259,15 +78,12 @@ todosPulsoNoRep.push(todosPulsos[i]);
                 cantTotal++;
 
             }
-	    //setea valores por defecto desde el ultimo dia registrado hasta el fin de mes
-            var hoyDate = new Date();
-            var ultiDate = new Date(hoyDate.getFullYear(), hoyDate.getMonth() + 1, 0);
-            for (j = cantTotal; j < ultiDate.getDate(); j++) {
+
+            var ultiDate = new Date(dateConsulta.getFullYear(), dateConsulta.getMonth() + 1, 0);
+
+            for (j = cantTotal+1; j < ultiDate.getDate()+1; j++) {
                     var cerros = [];
-                    var diaNum = j;
-                    if(diaNum>6){
-                        diaNum  = j % 7;
-                    }
+                    var diaNum = getNumeroDia(dateConsulta.getFullYear(), dateConsulta.getMonth(), j);
                     cerros.push(days[diaNum]);
                     cerros.push(0);
                     cerros.push(0);
@@ -344,13 +160,17 @@ todosPulsoNoRep.push(todosPulsos[i]);
     });
 }
 
+
 function mostrarPasos(desde, hasta) {
+var dateConsulta = new Date();
 if(desde == null || hasta == null){
     var date = new Date();
     desde = new Date(date.getFullYear(), date.getMonth(), 1);
     desde = formatDate(desde);
     hasta = new Date(date.getFullYear(), date.getMonth() + 1, 0);
     hasta = formatDate(hasta);
+}else{
+dateConsulta =  parseToDate(desde,"ddmmyyyy");
 }
     $.ajax({
         url: '/wsbi/get_rango_pasos/'+ desde+'/'+hasta,
@@ -362,161 +182,7 @@ if(desde == null || hasta == null){
         success: function(data) {
             var todosPasos = data;
 
-      /**
-       todosPasos = [
-	{
-		"id": 1,
-		"fecha": "2017-09-01T15:42:04.829506Z",
-		"pasosProm": 5000
-	},
-	{
-		"id": 2,
-		"fecha": "2017-09-02T23:40:01.223697Z",
-		"pasosProm": 5000
-	},
-	{
-		"id": 3,
-		"fecha": "2017-09-03T23:44:39.503464Z",
-		"pasosProm": 308
-	},
-	{
-		"id": 4,
-		"fecha": "2017-09-04T23:49:32.544629Z",
-		"pasosProm": 308
 
-	},
-	{
-		"id": 5,
-		"fecha": "2017-09-05T23:49:32.544629Z",
-		"pasosProm": 308
-	},
-	{
-		"id": 6,
-		"fecha": "2017-09-06T23:49:32.544629Z",
-		"pasosProm": 308
-	},
-	{
-		"id": 7,
-		"fecha": "2017-09-07T14:26:15.455827Z",
-		"pasosProm": 308
-	},
-		{
-		"id": 1,
-		"fecha": "2017-09-08T15:42:04.829506Z",
-		"pasosProm": 5000
-	},
-	{
-		"id": 2,
-		"fecha": "2017-09-09T23:40:01.223697Z",
-		"pasosProm": 300
-	},
-	{
-		"id": 3,
-		"fecha": "2017-09-10T23:44:39.503464Z",
-		"pasosProm": 808
-	},
-	{
-		"id": 4,
-		"fecha": "2017-09-11T23:49:32.544629Z",
-		"pasosProm": 308
-	},
-	{
-		"id": 5,
-		"fecha": "2017-09-12T23:49:32.544629Z",
-		"pasosProm": 308
-	},
-	{
-		"id": 6,
-		"fecha": "2017-09-13T23:49:32.544629Z",
-		"pasosProm": 808
-	},
-	{
-		"id": 7,
-		"fecha": "2017-09-14T14:26:15.455827Z",
-		"pasosProm": 808
-	},
-		{
-		"id": 1,
-		"fecha": "2017-09-15T15:42:04.829506Z",
-		"pasosProm": 300
-	},
-	{
-		"id": 2,
-		"fecha": "2017-09-16T23:40:01.223697Z",
-		"pasosProm": 5000
-	},
-	{
-		"id": 3,
-		"fecha": "2017-09-17T23:44:39.503464Z",
-		"pasosProm": 808
-	},
-	{
-		"id": 4,
-		"fecha": "2017-09-18T23:49:32.544629Z",
-		"pasosProm": 606
-	},
-	{
-		"id": 5,
-		"fecha": "2017-09-19T00:59:28.623982Z",
-		"pasosProm": 808
-	},
-	{
-		"id": 6,
-		"fecha": "2017-09-20T00:59:53.831248Z",
-		"pasosProm": 808
-	},
-	{
-		"id": 7,
-		"fecha": "2017-09-21T14:26:15.455827Z",
-		"pasosProm": 308
-	},
-		{
-		"id": 1,
-		"fecha": "2017-09-22T15:42:04.829506Z",
-		"pasosProm": 5000
-	},
-	{
-		"id": 2,
-		"fecha": "2017-09-23T23:40:01.223697Z",
-		"pasosProm": 300
-	},
-	{
-		"id": 3,
-		"fecha": "2017-09-24T23:44:39.503464Z",
-		"pasosProm": 308
-	},
-	{
-		"id": 4,
-		"fecha": "2017-09-25T23:49:32.544629Z",
-		"pasosProm": 606
-	},
-	{
-		"id": 5,
-		"fecha": "2017-09-26T00:59:28.623982Z",
-		"pasosProm": 808
-	},
-	{
-		"id": 6,
-		"fecha": "2017-09-27T00:59:53.831248Z",
-		"pasosProm": 808
-	},
-	{
-		"id": 7,
-		"fecha": "2017-09-28T14:26:15.455827Z",
-		"pasosProm": 808
-	},
-	{
-		"id": 5,
-		"fecha": "2017-09-29T00:59:28.623982Z",
-		"pasosProm": 808
-	},
-	{
-		"id": 6,
-		"fecha": "2017-09-30T00:59:53.831248Z",
-		"pasosProm": 308
-	}
-];
-**/
 var todosPasosNoRep = [];
 var ultimoNoRep = null;
 for (i = 0; i < todosPasos.length; i++) {
@@ -564,15 +230,13 @@ todosPasosNoRep.push(todosPasos[i]);
                 diaAnteriorLeido = dateD.getDate() +1;
                 cantTotal++;
             }
-            //setea valores por defecto desde el ultimo dia registrado hasta el fin de mes
-            var hoyDate = new Date();
-            var ultiDate = new Date(hoyDate.getFullYear(), hoyDate.getMonth() + 1, 0);
-            for (j = cantTotal; j < ultiDate.getDate(); j++) {
+
+            var ultiDate = new Date(dateConsulta.getFullYear(), dateConsulta.getMonth() + 1, 0);
+
+            for (j = cantTotal+1; j < ultiDate.getDate()+1; j++) {
                     var cerros = [];
-                    var diaNum = j;
-                    if(diaNum>6){
-                        diaNum  = j % 7;
-                    }
+                    var diaNum = getNumeroDia(dateConsulta.getFullYear(), dateConsulta.getMonth(), j);
+
                     cerros.push(days[diaNum]);
                     cerros.push(0);
                     datos.push(cerros);

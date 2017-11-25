@@ -64,6 +64,13 @@ function parseToDate(fechaString, formato) {
 
 		// Now, create a couple of Date objects.
 		date = new Date(year, month, day);
+	}else if(formato === "ddmmyyyy"){
+		var day = parseInt(fechaString.substring(0,2), 10);
+		var month = parseInt(fechaString.substring(2,4), 10) - 1; // JavaScript uses 0-11 for month
+		var year = parseInt(fechaString.substring(4,8), 10);
+
+		// Now, create a couple of Date objects.
+		date = new Date(year, month, day);
 	}else{
 		date = new Date(fechaString);
 	}
@@ -81,4 +88,9 @@ function formatDate(date) {
     if (day.length < 2) day = '0' + day;
 
     return [ day, month, year].join('');
+}
+
+function getNumeroDia(anio, mes, dia) {
+    var dateD = new Date(anio, mes, dia);
+    return dateD.getDay();
 }
